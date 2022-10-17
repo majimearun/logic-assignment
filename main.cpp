@@ -97,7 +97,6 @@ result *createParseTree(string expression)
     return new result{head, i};
 }
 
-// Task 1: outputting the parse tree in prefix notation
 void printPreorder(node *head)
 {
     if (head != nullptr)
@@ -106,6 +105,12 @@ void printPreorder(node *head)
         printPreorder(head->left);
         printPreorder(head->right);
     }
+}
+// Task 1: infix to prefix notation
+void infixToPrefix(string expression)
+{
+    result *tree = createParseTree(expression);
+    printPreorder(tree->root);
 }
 
 // Task 2: converting prefix notation to parse tree
