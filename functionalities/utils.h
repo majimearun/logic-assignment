@@ -1,3 +1,6 @@
+#ifndef UTILS_H
+#define UTILS_H
+
 class utils
 {
 public:
@@ -6,3 +9,5 @@ public:
     static void make_truthtable(int **arr, int ncol, int nrow, int column, int step);
     static int **truthtable(int nvar);
 };
+
+#endif

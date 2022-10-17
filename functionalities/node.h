@@ -1,10 +1,14 @@
+#ifndef NODE_H
+#define NODE_H
+
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-struct node
+class node
 {
+public:
     char data;
     node *left;
     node *right;
@@ -18,3 +22,5 @@ struct node
     int fillRight(node *Node);
     int fill(char data);
 };
+
+#endif
