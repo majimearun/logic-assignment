@@ -17,6 +17,7 @@ node::node()
 
 int node::fillLeft(node *Node)
 {
+    Node->parent = this;
     if (leftFilled == false)
     {
         left = Node;
@@ -31,6 +32,7 @@ int node::fillLeft(node *Node)
 
 int node::fillRight(node *Node)
 {
+    Node->parent = this;
     if (rightFilled == false)
     {
         right = Node;

@@ -138,12 +138,13 @@ int main()
     string expression;
     cout << "Enter an expression: " << endl;
     cin >> expression;
-    result *result = createParseTree(expression);
+    result *result1;
+    result1 = createParseTree(expression);
     cout << "Inorder traversal of tree results in:" << endl;
-    printInorder(result->root);
+    printInorder(result1->root);
     cout << endl;
     cout << "Preorder traversal of tree results in:" << endl;
-    printPreorder(result->root);
+    printPreorder(result1->root);
     cout << endl;
 
     // Example run of creating a truth table (nvar)
