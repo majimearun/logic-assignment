@@ -131,7 +131,7 @@ void printInorder(node *head)
 // Task 5: evaulaing the truth value of the expression
 // 5.1: If no truth values given as input, use the full truth table
 // 5.2: If truth values given, parse tree only for that combination
-// 5.3 if only some truth values given, parse for possible combinations
+// 5.3 if only some truth values given, parse for possible combinations (optional)
 
 int main()
 {
