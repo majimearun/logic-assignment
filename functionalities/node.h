@@ -12,7 +12,6 @@ public:
     char data;
     node *left;
     node *right;
-    node *parent;
     bool isFilled;
     bool rightFilled;
     bool leftFilled;
