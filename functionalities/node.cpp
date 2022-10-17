@@ -9,6 +9,7 @@ node::node()
     data = ' ';
     left = nullptr;
     right = nullptr;
+    parent = nullptr;
     isFilled = false;
     rightFilled = false;
     leftFilled = false;
