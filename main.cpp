@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "./functionalities/utils.h"
 #include "./functionalities/node.h"
 
@@ -138,5 +139,20 @@ int main()
     cout << endl;
     cout << "Preorder traversal of tree results in:" << endl;
     printPreorder(result->root);
+    cout << endl;
+
+    // Example run of creating a truth table (nvar)
+    cout << "Truth table for 3 variables:" << endl;
+    int n = 3;
+    int **table = utils::truthtable(n);
+    for (int i = 0; i < pow(2, n); i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << table[i][j] << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }

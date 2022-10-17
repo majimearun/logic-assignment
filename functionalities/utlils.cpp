@@ -54,9 +54,6 @@ void utils::make_truthtable(int **arr, int ncol, int nrow, int column, int step)
     {
         return;
     }
-    cout << "column: " << column << endl;
-    cout << "step: " << step << endl;
-
     bool val = true;
     for (int row = 0; row < nrow; row++)
     {
