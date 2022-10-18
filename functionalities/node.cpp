@@ -12,6 +12,7 @@ node::node()
     isFilled = false;
     rightFilled = false;
     leftFilled = false;
+    truth = false;
 }
 
 int node::fillLeft(node *Node)
