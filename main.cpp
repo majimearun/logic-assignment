@@ -12,8 +12,6 @@ struct result
     int count;
 };
 
-int h = 0;
-
 // Task 0: Infix (fully bracketed) to rooted binary parse tree
 
 result *infixToParseTree(string expression)
@@ -152,38 +150,19 @@ void printPostorder(node *head)
 
 // Task 4: computing the height of the parse tree
 
-void findHeight(node *head, int curlen)
+int heightOfParseTree(node *head)
 {
-
-    if (!utils::isOperator(head->data))
+    int height = 1;
+    if (head != nullptr)
     {
-        curlen++;
-        if (curlen > h)
+        if (utils::isOperator(head->data))
         {
-            h = curlen;
+            int left = heightOfParseTree(head->left);
+            int right = heightOfParseTree(head->right);
+            height = 1 + max(left, right);
         }
     }
-    else
-    {
-        curlen++;
-        if (head->data == '~')
-        {
-            findHeight(head->right, curlen);
-        }
-        else
-        {
-            findHeight(head->left, curlen);
-            findHeight(head->right, curlen);
-        }
-    }
-}
-
-void height(node *head)
-{
-    int height = 0;
-    findHeight(head, 0);
-    cout << "height of given parse tree is: " << h << endl;
-    h = 0;
+    return height;
 }
 
 // Task 5: evaulaing the truth value of the expression
@@ -208,7 +187,8 @@ int main()
     printPostorder(result1->root);
     cout << endl;
 
-    height(result1->root);
+    int height = heightOfParseTree(result1->root);
+    cout << "height of given parse tree is: " << height << endl;
     cout << "------------------------------------" << endl;
     string infixExpression2;
     cout << "Enter an infix (well bracketed) expression: " << endl;
@@ -225,7 +205,8 @@ int main()
     printPostorder(tree->root);
     cout << endl;
 
-    height(tree->root);
+    height = heightOfParseTree(tree->root);
+    cout << "height of given parse tree is: " << height << endl;
 
     return 0;
 
