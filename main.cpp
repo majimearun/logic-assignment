@@ -14,7 +14,7 @@ struct result
 
 // Task 0: Infix (fully bracketed) to rooted binary parse tree
 
-result *createParseTree(string expression)
+result *infixToParseTree(string expression)
 {
     node *head = new node;
     bool end = false;
@@ -74,20 +74,20 @@ result *createParseTree(string expression)
                 {
                     if (head->leftFilled)
                     {
-                        result *temp = createParseTree(expression.substr(i + 1));
+                        result *temp = infixToParseTree(expression.substr(i + 1));
                         head->fillRight(temp->root);
                         i += temp->count;
                     }
                     else
                     {
-                        result *temp = createParseTree(expression.substr(i + 1));
+                        result *temp = infixToParseTree(expression.substr(i + 1));
                         head->fillLeft(temp->root);
                         i += temp->count;
                     }
                 }
                 else
                 {
-                    result *temp = createParseTree(expression.substr(i + 1));
+                    result *temp = infixToParseTree(expression.substr(i + 1));
                     head->fillRight(temp->root);
                     i += temp->count;
                     head->leftFilled = true;
@@ -119,30 +119,11 @@ void printPreorder(node *head)
 // Task 1: infix to prefix notation
 void infixToPrefix(string expression)
 {
-    result *tree = createParseTree(expression);
+    result *tree = infixToParseTree(expression);
     printPreorder(tree->root);
 }
 
 // Task 2: converting prefix notation to parse tree
-
-// function that properly paranthesizes a prefix expression
-
-struct answer
-{
-    string expression;
-    int count;
-};
-
-answer *parenthesizePrefix(string expression)
-{
-    return new answer{"", 0};
-}
-
-result *prefixToParseTree(string expression)
-{
-    answer *paranthesized = parenthesizePrefix(expression);
-    return createParseTree(paranthesized->expression);
-}
 
 // Task 3: outputting the parse tree in infix notation
 void printInorder(node *head)
@@ -164,11 +145,11 @@ void printInorder(node *head)
 
 int main()
 {
-    string expression;
-    cout << "Enter an expression: " << endl;
-    cin >> expression;
+    string infixExpression;
+    cout << "Enter an infix (well bracketed) expression: " << endl;
+    cin >> infixExpression;
     result *result1;
-    result1 = createParseTree(expression);
+    result1 = infixToParseTree(infixExpression);
     cout << "Inorder traversal of tree results in:" << endl;
     printInorder(result1->root);
     cout << endl;
