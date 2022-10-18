@@ -32,4 +32,4 @@
 *.app
 
 # Compiler settings
-.vscode/tasks.json
+.vscode/

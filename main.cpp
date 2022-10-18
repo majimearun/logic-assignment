@@ -70,17 +70,27 @@ result *createParseTree(string expression)
         {
             if (var == '(')
             {
-                if (head->leftFilled)
+                if (head->data != '~')
                 {
-                    result *temp = createParseTree(expression.substr(i + 1));
-                    head->fillRight(temp->root);
-                    i += temp->count;
+                    if (head->leftFilled)
+                    {
+                        result *temp = createParseTree(expression.substr(i + 1));
+                        head->fillRight(temp->root);
+                        i += temp->count;
+                    }
+                    else
+                    {
+                        result *temp = createParseTree(expression.substr(i + 1));
+                        head->fillLeft(temp->root);
+                        i += temp->count;
+                    }
                 }
                 else
                 {
                     result *temp = createParseTree(expression.substr(i + 1));
-                    head->fillLeft(temp->root);
+                    head->fillRight(temp->root);
                     i += temp->count;
+                    head->leftFilled = true;
                 }
             }
             else
@@ -115,6 +125,25 @@ void infixToPrefix(string expression)
 
 // Task 2: converting prefix notation to parse tree
 
+// function that properly paranthesizes a prefix expression
+
+struct answer
+{
+    string expression;
+    int count;
+};
+
+answer *parenthesizePrefix(string expression)
+{
+    return new answer{"", 0};
+}
+
+result *prefixToParseTree(string expression)
+{
+    answer *paranthesized = parenthesizePrefix(expression);
+    return createParseTree(paranthesized->expression);
+}
+
 // Task 3: outputting the parse tree in infix notation
 void printInorder(node *head)
 {
@@ -148,17 +177,17 @@ int main()
     cout << endl;
 
     // Example run of creating a truth table (nvar)
-    cout << "Truth table for 3 variables:" << endl;
-    int n = 3;
-    int **table = utils::truthtable(n);
-    for (int i = 0; i < pow(2, n); i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cout << table[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // cout << "Truth table for 3 variables:" << endl;
+    // int n = 3;
+    // int **table = utils::truthtable(n);
+    // for (int i = 0; i < pow(2, n); i++)
+    // {
+    //     for (int j = 0; j < n; j++)
+    //     {
+    //         cout << table[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
     return 0;
 }
