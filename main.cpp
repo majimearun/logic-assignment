@@ -130,6 +130,111 @@ result *infixToPrefix(string expression)
 
 // Task 2: converting prefix notation to parse tree
 
+result *prefixToParseTree(string expression)
+{
+    int success = 0;
+    node *head = new node;
+    bool end = false;
+    int i = 0;
+    while (!end)
+    {
+        char var = expression[i];
+        if (!utils::isOperator(var))
+        {
+            if (head->data != '~')
+            {
+                if (head->leftFilled)
+                {
+                    node *right = new node;
+                    right->data = var;
+                    success = head->fillRight(right);
+                    end = true;
+                }
+                else
+                {
+                    node *left = new node;
+                    left->data = var;
+                    success = head->fillLeft(left);
+                }
+            }
+            else
+            {
+                node *right = new node;
+                right->data = var;
+                success = head->fillRight(right);
+                head->leftFilled = true;
+                end = true;
+            }
+        }
+        else
+        {
+            if (var != '~')
+            {
+                if (head->isFilled)
+                {
+                    if (head->leftFilled)
+                    {
+                        result *temp = prefixToParseTree(expression.substr(i));
+                        success = head->fillRight(temp->root);
+                        i += temp->count - 1;
+                        end = true;
+                    }
+                    else
+                    {
+                        result *temp = prefixToParseTree(expression.substr(i));
+                        success = head->fillLeft(temp->root);
+                        i += temp->count - 1;
+                    }
+                }
+                else
+                {
+                    success = head->fill(var);
+                }
+            }
+            else
+            {
+                if (head->isFilled)
+                {
+                    if (head->data != '~')
+                    {
+                        if (head->leftFilled)
+                        {
+                            result *temp = prefixToParseTree(expression.substr(i));
+                            success = head->fillRight(temp->root);
+                            i += temp->count - 1;
+                            end = true;
+                        }
+                        else
+                        {
+                            result *temp = prefixToParseTree(expression.substr(i));
+                            success = head->fillLeft(temp->root);
+                            i += temp->count - 1;
+                        }
+                    }
+                    else
+                    {
+                        result *temp = prefixToParseTree(expression.substr(i));
+                        success = head->fillRight(temp->root);
+                        head->leftFilled = true;
+                        i += temp->count - 1;
+                        end = true;
+                    }
+                }
+                else
+                {
+                    success = head->fill(var);
+                }
+            }
+        }
+        if (i >= expression.length())
+        {
+            end = true;
+        }
+        i++;
+    }
+    return new result{head, i};
+}
+
 // Task 3: Outputting the parse tree in infix notation using inorder traversal
 
 void printInorder(node *head)
@@ -206,6 +311,19 @@ int main()
 
     // Task 2 run
     cout << "Task 2: converting prefix notation to parse tree" << endl;
+    cout << "Enter the prefix expression: ";
+    cin >> expression;
+    tree = prefixToParseTree(expression);
+    cout << "Traversing the parse tree in various ways: " << endl;
+    cout << "Preorder: ";
+    printPreorder(tree->root);
+    cout << endl;
+    cout << "Inorder: ";
+    printInorder(tree->root);
+    cout << endl;
+    cout << "Postorder: ";
+    printPostorder(tree->root);
+    cout << endl;
     cout << "--------------------------------------------" << endl;
 
     // Task 3 run
