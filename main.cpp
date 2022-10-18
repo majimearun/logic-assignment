@@ -12,7 +12,7 @@ struct result
     int count;
 };
 
-// Task 0: Infix (fully bracketed) to rooted binary parse tree
+// Task 0: Infix expression (fully bracketed) to rooted binary parse tree
 
 result *infixToParseTree(string expression)
 {
@@ -107,6 +107,10 @@ result *infixToParseTree(string expression)
     return new result{head, i};
 }
 
+// Task 1: Infix expression (fully bracketed) to prefix notation
+
+// Preorder traversal of the parse tree
+
 void printPreorder(node *head)
 {
     if (head != nullptr)
@@ -116,7 +120,7 @@ void printPreorder(node *head)
         printPreorder(head->right);
     }
 }
-// Task 1: infix to prefix notation
+
 result *infixToPrefix(string expression)
 {
     result *tree = infixToParseTree(expression);
@@ -126,7 +130,8 @@ result *infixToPrefix(string expression)
 
 // Task 2: converting prefix notation to parse tree
 
-// Task 3: outputting the parse tree in infix notation
+// Task 3: Outputting the parse tree in infix notation using inorder traversal
+
 void printInorder(node *head)
 {
     if (head != nullptr)
@@ -137,7 +142,8 @@ void printInorder(node *head)
     }
 }
 
-// Postorder traversal of the parse tree
+// Extra: Postorder traversal of the parse tree
+
 void printPostorder(node *head)
 {
     if (head != nullptr)
@@ -172,56 +178,56 @@ int heightOfParseTree(node *head)
 
 int main()
 {
-    string infixExpression;
-    cout << "Enter an infix (well bracketed) expression: " << endl;
-    cin >> infixExpression;
-    result *result1;
-    result1 = infixToParseTree(infixExpression);
-    cout << "Inorder traversal of tree results in:" << endl;
-    printInorder(result1->root);
-    cout << endl;
-    cout << "Preorder traversal of tree results in:" << endl;
-    printPreorder(result1->root);
-    cout << endl;
-    cout << "Postorder traversal of tree results in:" << endl;
-    printPostorder(result1->root);
-    cout << endl;
-
-    int height = heightOfParseTree(result1->root);
-    cout << "height of given parse tree is: " << height << endl;
-    cout << "------------------------------------" << endl;
-    string infixExpression2;
-    cout << "Enter an infix (well bracketed) expression: " << endl;
-    cin >> infixExpression2;
-    result *tree = infixToPrefix(infixExpression2);
-    cout << endl;
-    cout << "Inorder traversal of tree results in:" << endl;
-    printInorder(tree->root);
-    cout << endl;
-    cout << "Preorder traversal of tree results in:" << endl;
+    // Task 0 run
+    cout << "Task 0: Infix expression (fully bracketed) to rooted binary parse tree" << endl;
+    string expression;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    result *tree = infixToParseTree(expression);
+    cout << "Traversing the parse tree in various ways: " << endl;
+    cout << "Preorder: ";
     printPreorder(tree->root);
     cout << endl;
-    cout << "Postorder traversal of tree results in:" << endl;
+    cout << "Inorder: ";
+    printInorder(tree->root);
+    cout << endl;
+    cout << "Postorder: ";
     printPostorder(tree->root);
     cout << endl;
+    cout << "--------------------------------------------" << endl;
 
-    height = heightOfParseTree(tree->root);
-    cout << "height of given parse tree is: " << height << endl;
+    // Task 1 run
+    cout << "Task 1: Infix expression (fully bracketed) to prefix notation" << endl;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    tree = infixToPrefix(expression);
+    cout << endl;
+    cout << "--------------------------------------------" << endl;
 
-    return 0;
+    // Task 2 run
+    cout << "Task 2: converting prefix notation to parse tree" << endl;
+    cout << "--------------------------------------------" << endl;
 
-    // Example run of creating a truth table (nvar)
-    // cout << "Truth table for 3 variables:" << endl;
-    // int n = 3;
-    // int **table = utils::truthtable(n);
-    // for (int i = 0; i < pow(2, n); i++)
-    // {
-    //     for (int j = 0; j < n; j++)
-    //     {
-    //         cout << table[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
+    // Task 3 run
+    cout << "Task 3: Outputting the parse tree in infix notation using inorder traversal" << endl;
+    cout << "Using tree generated in task 1..." << endl;
+    printInorder(tree->root);
+    cout << endl;
+    cout << "--------------------------------------------" << endl;
 
+    // Task 4 run
+    cout << "Task 4: computing the height of the parse tree" << endl;
+    cout << "Using tree generated in task 1..." << endl;
+    cout << "Height of the parse tree: " << heightOfParseTree(tree->root) << endl;
+    cout << "--------------------------------------------" << endl;
+
+    // Task 5 run
+    cout << "Task 5: evaulaing the truth value of the expression" << endl;
+    cout << "Task 5.1: All truth values given:" << endl;
+    cout << "----------" << endl;
+    cout << "Task 5.2: Some truth values given:" << endl;
+    cout << "----------" << endl;
+    cout << "Task 5.3: No truth values given:" << endl;
+    cout << "--------------------------------------------" << endl;
     return 0;
 }
