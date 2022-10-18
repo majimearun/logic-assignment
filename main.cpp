@@ -12,6 +12,8 @@ struct result
     int count;
 };
 
+int h = 0;
+
 // Task 0: Infix (fully bracketed) to rooted binary parse tree
 
 result *infixToParseTree(string expression)
@@ -117,10 +119,11 @@ void printPreorder(node *head)
     }
 }
 // Task 1: infix to prefix notation
-void infixToPrefix(string expression)
+result *infixToPrefix(string expression)
 {
     result *tree = infixToParseTree(expression);
     printPreorder(tree->root);
+    return tree;
 }
 
 // Task 2: converting prefix notation to parse tree
@@ -136,7 +139,52 @@ void printInorder(node *head)
     }
 }
 
+// Postorder traversal of the parse tree
+void printPostorder(node *head)
+{
+    if (head != nullptr)
+    {
+        printPostorder(head->left);
+        printPostorder(head->right);
+        cout << head->data;
+    }
+}
+
 // Task 4: computing the height of the parse tree
+
+void findHeight(node *head, int curlen)
+{
+
+    if (!utils::isOperator(head->data))
+    {
+        curlen++;
+        if (curlen > h)
+        {
+            h = curlen;
+        }
+    }
+    else
+    {
+        curlen++;
+        if (head->data == '~')
+        {
+            findHeight(head->right, curlen);
+        }
+        else
+        {
+            findHeight(head->left, curlen);
+            findHeight(head->right, curlen);
+        }
+    }
+}
+
+void height(node *head)
+{
+    int height = 0;
+    findHeight(head, 0);
+    cout << "height of given parse tree is: " << h << endl;
+    h = 0;
+}
 
 // Task 5: evaulaing the truth value of the expression
 // 5.1: If no truth values given as input, use the full truth table
@@ -156,6 +204,30 @@ int main()
     cout << "Preorder traversal of tree results in:" << endl;
     printPreorder(result1->root);
     cout << endl;
+    cout << "Postorder traversal of tree results in:" << endl;
+    printPostorder(result1->root);
+    cout << endl;
+
+    height(result1->root);
+    cout << "------------------------------------" << endl;
+    string infixExpression2;
+    cout << "Enter an infix (well bracketed) expression: " << endl;
+    cin >> infixExpression2;
+    result *tree = infixToPrefix(infixExpression2);
+    cout << endl;
+    cout << "Inorder traversal of tree results in:" << endl;
+    printInorder(tree->root);
+    cout << endl;
+    cout << "Preorder traversal of tree results in:" << endl;
+    printPreorder(tree->root);
+    cout << endl;
+    cout << "Postorder traversal of tree results in:" << endl;
+    printPostorder(tree->root);
+    cout << endl;
+
+    height(tree->root);
+
+    return 0;
 
     // Example run of creating a truth table (nvar)
     // cout << "Truth table for 3 variables:" << endl;
