@@ -12,8 +12,6 @@ node::node()
     isFilled = false;
     rightFilled = false;
     leftFilled = false;
-    truth = false;
-    isTruthAssigned = false;
 }
 
 int node::fillLeft(node *Node)

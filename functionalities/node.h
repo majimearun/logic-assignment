@@ -15,8 +15,6 @@ public:
     bool isFilled;
     bool rightFilled;
     bool leftFilled;
-    bool truth;
-    bool isTruthAssigned;
 
     node();
     int fillLeft(node *Node);

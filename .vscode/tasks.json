@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe build active file",
-			"command": "C:\\mingw64\\bin\\g++.exe",
+			"command": "D:\\programming\\cpp\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -17,14 +17,12 @@
 			"options": {
 				"cwd": "${fileDirname}"
 			},
-			"problemMatcher": [
-				"$gcc"
-			],
+			"problemMatcher": ["$gcc"],
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: C:\\mingw64\\bin\\g++.exe"
+			"detail": "compiler: D:\\programming\\cpp\\mingw64\\bin\\g++.exe"
 		}
 	]
 }

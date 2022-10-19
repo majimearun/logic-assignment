@@ -26,27 +26,35 @@ result *infixToParseTree(string expression)
         {
             if (!utils::isOperator(var))
             {
-                if (head->data != '~')
+                if (head->isFilled)
                 {
-                    if (head->leftFilled)
+                    if (head->data != '~')
+                    {
+                        if (head->leftFilled)
+                        {
+                            node *right = new node;
+                            right->data = var;
+                            head->fillRight(right);
+                        }
+                        else
+                        {
+                            node *left = new node;
+                            left->data = var;
+                            head->fillLeft(left);
+                        }
+                    }
+                    else
                     {
                         node *right = new node;
                         right->data = var;
                         head->fillRight(right);
-                    }
-                    else
-                    {
-                        node *left = new node;
-                        left->data = var;
-                        head->fillLeft(left);
+                        head->leftFilled = true;
                     }
                 }
                 else
                 {
-                    node *right = new node;
-                    right->data = var;
-                    head->fillRight(right);
-                    head->leftFilled = true;
+                    head->data = var;
+                    head->isFilled = true;
                 }
             }
             else
@@ -222,14 +230,15 @@ result *prefixToParseTree(string expression)
                 }
                 else
                 {
-                    if(var != '~'){
+                    if (var != '~')
+                    {
                         success = head->fill(var);
                     }
-                    else{
+                    else
+                    {
                         success = head->fill(var);
                         head->leftFilled = true;
                     }
-                    
                 }
             }
         }
@@ -284,9 +293,78 @@ int heightOfParseTree(node *head)
 }
 
 // Task 5: evaulaing the truth value of the expression
-// 5.1: If no truth values given as input, use the full truth table
-// 5.2: If truth values given, parse tree only for that combination
-// 5.3 if only some truth values given, parse for possible combinations (optional)
+
+string uniqueAtoms(string expression)
+{
+    string uniqueChars = "";
+    for (int i = 0; i < expression.length(); i++)
+    {
+        char var = expression[i];
+        if (!utils::isOperator(var) && !utils::isBracket(var))
+        {
+            if (uniqueChars.find(var) == string::npos)
+            {
+                uniqueChars += var;
+            }
+        }
+    }
+    return uniqueChars;
+}
+
+bool *assignTruthValues(string uniqueChars)
+{
+    bool *truthValues = new bool[uniqueChars.length()];
+    for (int i = 0; i < uniqueChars.length(); i++)
+    {
+        char var = uniqueChars[i];
+        cout << "Enter the truth value of " << var << ": ";
+        cin >> truthValues[i];
+    }
+    return truthValues;
+}
+
+bool evaluteParseTree(node *head, bool *truthValues, string uniqueChars)
+{
+    bool result = false;
+    if (head != nullptr)
+    {
+        if (utils::isOperator(head->data))
+        {
+            bool left = evaluteParseTree(head->left, truthValues, uniqueChars);
+            bool right = evaluteParseTree(head->right, truthValues, uniqueChars);
+            switch (head->data)
+            {
+            case '>':
+                result = !left || right;
+                break;
+            case '*':
+                result = left && right;
+                break;
+            case '~':
+                result = !right;
+                break;
+            case '+':
+                result = left || right;
+                break;
+            }
+        }
+        else
+        {
+            int index = uniqueChars.find(head->data);
+            result = truthValues[index];
+        }
+    }
+    return result;
+}
+
+bool evaluateExpression(string expression)
+{
+    string uniqueChars = uniqueAtoms(expression);
+    bool *truthValues = assignTruthValues(uniqueChars);
+    result *parseTree = infixToParseTree(expression);
+    bool result = evaluteParseTree(parseTree->root, truthValues, uniqueChars);
+    return result;
+}
 
 int main()
 {
@@ -335,24 +413,27 @@ int main()
 
     // Task 3 run
     cout << "Task 3: Outputting the parse tree in infix notation using inorder traversal" << endl;
-    cout << "Using tree generated in task 1..." << endl;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    tree = infixToPrefix(expression);
     printInorder(tree->root);
     cout << endl;
     cout << "--------------------------------------------" << endl;
 
     // Task 4 run
     cout << "Task 4: computing the height of the parse tree" << endl;
-    cout << "Using tree generated in task 1..." << endl;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    tree = infixToPrefix(expression);
     cout << "Height of the parse tree: " << heightOfParseTree(tree->root) << endl;
     cout << "--------------------------------------------" << endl;
 
     // Task 5 run
     cout << "Task 5: evaulaing the truth value of the expression" << endl;
-    cout << "Task 5.1: All truth values given:" << endl;
-    cout << "----------" << endl;
-    cout << "Task 5.2: Some truth values given:" << endl;
-    cout << "----------" << endl;
-    cout << "Task 5.3: No truth values given:" << endl;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    bool truth = evaluateExpression(expression);
+    cout << "The truth value of the expression is: " << truth << endl;
     cout << "--------------------------------------------" << endl;
     return 0;
 }
