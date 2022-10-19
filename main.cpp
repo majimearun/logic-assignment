@@ -294,35 +294,6 @@ int heightOfParseTree(node *head)
 
 // Task 5: evaulaing the truth value of the expression
 
-string uniqueAtoms(string expression)
-{
-    string uniqueChars = "";
-    for (int i = 0; i < expression.length(); i++)
-    {
-        char var = expression[i];
-        if (!utils::isOperator(var) && !utils::isBracket(var))
-        {
-            if (uniqueChars.find(var) == string::npos)
-            {
-                uniqueChars += var;
-            }
-        }
-    }
-    return uniqueChars;
-}
-
-bool *assignTruthValues(string uniqueChars)
-{
-    bool *truthValues = new bool[uniqueChars.length()];
-    for (int i = 0; i < uniqueChars.length(); i++)
-    {
-        char var = uniqueChars[i];
-        cout << "Enter the truth value of " << var << ": ";
-        cin >> truthValues[i];
-    }
-    return truthValues;
-}
-
 bool evaluteParseTree(node *head, bool *truthValues, string uniqueChars)
 {
     bool result = false;
@@ -359,11 +330,29 @@ bool evaluteParseTree(node *head, bool *truthValues, string uniqueChars)
 
 bool evaluateExpression(string expression)
 {
-    string uniqueChars = uniqueAtoms(expression);
-    bool *truthValues = assignTruthValues(uniqueChars);
+    string uniqueChars = utils::uniqueAtoms(expression);
+    bool *truthValues = utils::assignTruthValues(uniqueChars);
     result *parseTree = infixToParseTree(expression);
     bool result = evaluteParseTree(parseTree->root, truthValues, uniqueChars);
     return result;
+}
+
+void showTruthTable(string expression)
+{
+    string uniqueChars = utils::uniqueAtoms(expression);
+    int **table = utils::truthTable(uniqueChars.length());
+    for (int i = 0; i < pow(2, uniqueChars.length()); i++)
+    {
+        bool *truthValues = utils::assignTruthValues(uniqueChars, table[i]);
+        result *parseTree = infixToParseTree(expression);
+        bool result = evaluteParseTree(parseTree->root, truthValues, uniqueChars);
+        cout << "Row " << i + 1 << ": ";
+        for (int j = 0; j < uniqueChars.length(); j++)
+        {
+            cout << uniqueChars[j] << " = " << truthValues[j] << ", ";
+        }
+        cout << "Result = " << result << endl;
+    }
 }
 
 int main()
@@ -415,7 +404,7 @@ int main()
     cout << "Task 3: Outputting the parse tree in infix notation using inorder traversal" << endl;
     cout << "Enter the infix expression (fully bracketed): ";
     cin >> expression;
-    tree = infixToPrefix(expression);
+    tree = infixToParseTree(expression);
     printInorder(tree->root);
     cout << endl;
     cout << "--------------------------------------------" << endl;
@@ -424,7 +413,7 @@ int main()
     cout << "Task 4: computing the height of the parse tree" << endl;
     cout << "Enter the infix expression (fully bracketed): ";
     cin >> expression;
-    tree = infixToPrefix(expression);
+    tree = infixToParseTree(expression);
     cout << "Height of the parse tree: " << heightOfParseTree(tree->root) << endl;
     cout << "--------------------------------------------" << endl;
 
@@ -435,5 +424,10 @@ int main()
     bool truth = evaluateExpression(expression);
     cout << "The truth value of the expression is: " << truth << endl;
     cout << "--------------------------------------------" << endl;
+
+    cout << "Evaluating whole truth table for expression:" << endl;
+    cout << "Enter the infix expression (fully bracketed): ";
+    cin >> expression;
+    showTruthTable(expression);
     return 0;
 }

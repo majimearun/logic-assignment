@@ -29,7 +29,7 @@ bool utils::isBracket(char c)
     return false;
 }
 
-int **utils::truthtable(int nvar)
+int **utils::truthTable(int nvar)
 {
     int rows = pow(2, nvar);
     int columns = nvar;
@@ -64,4 +64,43 @@ void utils::make_truthtable(int **arr, int ncol, int nrow, int column, int step)
         arr[row][column] = val;
     }
     make_truthtable(arr, ncol, nrow, column + 1, step / 2);
+}
+
+string utils::uniqueAtoms(string expression)
+{
+    string uniqueChars = "";
+    for (int i = 0; i < expression.length(); i++)
+    {
+        char var = expression[i];
+        if (!utils::isOperator(var) && !utils::isBracket(var))
+        {
+            if (uniqueChars.find(var) == string::npos)
+            {
+                uniqueChars += var;
+            }
+        }
+    }
+    return uniqueChars;
+}
+
+bool *utils::assignTruthValues(string uniqueChars)
+{
+    bool *truthValues = new bool[uniqueChars.length()];
+    for (int i = 0; i < uniqueChars.length(); i++)
+    {
+        char var = uniqueChars[i];
+        cout << "Enter the truth value of " << var << ": ";
+        cin >> truthValues[i];
+    }
+    return truthValues;
+}
+
+bool *utils::assignTruthValues(string uniqueChars, int *row)
+{
+    bool *truthValues = new bool[uniqueChars.length()];
+    for (int i = 0; i < uniqueChars.length(); i++)
+    {
+        truthValues[i] = row[i];
+    }
+    return truthValues;
 }
