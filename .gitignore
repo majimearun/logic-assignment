@@ -32,7 +32,7 @@
 *.app
 
 # Compiler settings
-.vscode
+**/.vscode/
 
 # Generated Documentation
 documentation/
