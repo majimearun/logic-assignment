@@ -6,14 +6,114 @@
 
 using namespace std;
 
-string atoms = "";
-int *truthValues;
+// int *truthValues;
 struct result
 {
     node *root;
     int count;
 };
-result *tree;
+
+result *infixToParseTree(string expression)
+{
+    node *head = new node;
+    bool end = false;
+    int i = 0;
+    while (!end)
+    {
+        char var = expression[i];
+        if (!utils::isBracket(var))
+        {
+            if (!utils::isOperator(var))
+            {
+                if (head->isFilled)
+                {
+                    if (head->data != '~')
+                    {
+                        if (head->leftFilled)
+                        {
+                            node *right = new node;
+                            right->data = var;
+                            head->fillRight(right);
+                        }
+                        else
+                        {
+                            node *left = new node;
+                            left->data = var;
+                            head->fillLeft(left);
+                        }
+                    }
+                    else
+                    {
+                        node *right = new node;
+                        right->data = var;
+                        head->fillRight(right);
+                        head->leftFilled = true;
+                    }
+                }
+                else
+                {
+                    head->data = var;
+                    head->isFilled = true;
+                }
+            }
+            else
+            {
+                if (!(head->isFilled))
+                {
+                    head->fill(var);
+                }
+                else
+                {
+                    node *temp = new node;
+
+                    temp->left = head;
+                    temp->leftFilled = true;
+                    head = temp;
+                    head->fill(var);
+                }
+            }
+        }
+        else
+        {
+            if (var == '(')
+            {
+                if (head->data != '~')
+                {
+                    if (head->leftFilled)
+                    {
+                        result *temp = infixToParseTree(expression.substr(i + 1));
+                        head->fillRight(temp->root);
+                        i += temp->count;
+                    }
+                    else
+                    {
+                        result *temp = infixToParseTree(expression.substr(i + 1));
+                        head->fillLeft(temp->root);
+                        i += temp->count;
+                    }
+                }
+                else
+                {
+                    result *temp = infixToParseTree(expression.substr(i + 1));
+                    head->fillRight(temp->root);
+                    i += temp->count;
+                    head->leftFilled = true;
+                }
+            }
+            else
+            {
+                end = true;
+            }
+        }
+        if (i >= expression.length())
+        {
+            end = true;
+        }
+        i++;
+    }
+    return new result{head, i};
+}
+
 bool implicationOperator(node *left, node *right)
 {
     if (left->truth)
@@ -58,7 +158,7 @@ bool notOperator(node *right)
         return true;
     }
 }
-void assignValue(node *head)
+void assignValue(node *head, string atoms, bool *truthValues)
 {
     for (int i = 0; i < atoms.length(); i++)
     {
@@ -68,13 +168,13 @@ void assignValue(node *head)
         }
     }
 }
-void atomAssignment(node *head)
+void atomAssignment(node *head, string atoms, bool *truthValues)
 {
     if (!utils::isOperator(head->data)) // if head is a propositional atom
     {
         if (head->isTruthAssigned == false)
         {
-            assignValue(head);
+            assignValue(head, atoms, truthValues);
             head->isTruthAssigned = true;
         }
         else
@@ -86,29 +186,29 @@ void atomAssignment(node *head)
     {
         if ((!utils::isOperator(head->left->data)) && (head->left->isTruthAssigned == false)) // if left is an atom
         {
-            assignValue(head->left);
+            assignValue(head->left, atoms, truthValues);
             head->left->isTruthAssigned = true;
         }
     }
     if (!utils::isOperator(head->right->data) && head->right->isTruthAssigned == false) // if right is an atom
     {
-        assignValue(head->right);
+        assignValue(head->right, atoms, truthValues);
         head->right->isTruthAssigned = true;
     }
     if (head->data != '~')
     {
         if (utils::isOperator(head->left->data))
         {
-            atomAssignment(head->left);
+            atomAssignment(head->left, atoms, truthValues);
         }
     }
     else
     {
-        atomAssignment(head->right);
+        atomAssignment(head->right, atoms, truthValues);
     }
     if (utils::isOperator(head->right->data))
     {
-        atomAssignment(head->right);
+        atomAssignment(head->right, atoms, truthValues);
     }
 }
 
@@ -154,35 +254,12 @@ int main()
     cin >> expression;
     char var;
 
-    for (int i = 0; i < expression.length(); i++)
-    {
-        var = expression[i];
-        if (!utils::isBracket(var) && !utils::isOperator(var))
-        {
-            int ctr = 0;
-            for (int j = 0; j < atoms.length(); j++)
-            {
-                if (atoms[j] == var)
-                {
-                    ctr = 1;
-                }
-            }
-            if (ctr == 0)
-            {
-                atoms += var;
-            }
-        }
-    }
-    truthValues = new int[atoms.length()];
-    for (int i = 0; i < atoms.length(); i++)
-    {
-        cout << "Enter truth value of " << atoms[i] << " ";
-        cin >> truthValues[i];
-        cout << "\n";
-    }
+    string atoms = utils::uniqueAtoms(expression);
+    bool *truthValues = utils::assignTruthValues(atoms);
+
     cout << "\n";
     result *tree = infixToParseTree(expression);
-    atomAssignment(tree->root);
+    atomAssignment(tree->root, atoms, truthValues);
     truthValue(tree->root);
     cout << "The truth value is: ";
     cout << tree->root->truth;
