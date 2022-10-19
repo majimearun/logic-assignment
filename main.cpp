@@ -222,7 +222,14 @@ result *prefixToParseTree(string expression)
                 }
                 else
                 {
-                    success = head->fill(var);
+                    if(var != '~'){
+                        success = head->fill(var);
+                    }
+                    else{
+                        success = head->fill(var);
+                        head->leftFilled = true;
+                    }
+                    
                 }
             }
         }

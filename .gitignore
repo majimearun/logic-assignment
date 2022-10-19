@@ -33,3 +33,6 @@
 
 # Compiler settings
 .vscode/
+
+# Generated Documentation
+documentation/
