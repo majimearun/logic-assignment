@@ -6,6 +6,8 @@
 
 using namespace std;
 
+string atoms = "";
+int *truthValues;
 struct result
 {
     node *root;
@@ -56,14 +58,23 @@ bool notOperator(node *right)
         return true;
     }
 }
-
+void assignValue(node *head)
+{
+    for (int i = 0; i < atoms.length(); i++)
+    {
+        if (head->data == atoms[i])
+        {
+            head->truth = (bool)truthValues[i];
+        }
+    }
+}
 void atomAssignment(node *head)
 {
     if (!utils::isOperator(head->data)) // if head is a propositional atom
     {
         if (head->isTruthAssigned == false)
         {
-            head->truth = true;
+            assignValue(head);
             head->isTruthAssigned = true;
         }
         else
@@ -75,13 +86,13 @@ void atomAssignment(node *head)
     {
         if ((!utils::isOperator(head->left->data)) && (head->left->isTruthAssigned == false)) // if left is an atom
         {
-            head->left->truth = true;
+            assignValue(head->left);
             head->left->isTruthAssigned = true;
         }
     }
     if (!utils::isOperator(head->right->data) && head->right->isTruthAssigned == false) // if right is an atom
     {
-        head->right->truth = true;
+        assignValue(head->right);
         head->right->isTruthAssigned = true;
     }
     if (head->data != '~')
@@ -141,9 +152,39 @@ int main()
     string expression;
     cout << "Enter an expression: " << endl;
     cin >> expression;
+    char var;
+
+    for (int i = 0; i < expression.length(); i++)
+    {
+        var = expression[i];
+        if (!utils::isBracket(var) && !utils::isOperator(var))
+        {
+            int ctr = 0;
+            for (int j = 0; j < atoms.length(); j++)
+            {
+                if (atoms[j] == var)
+                {
+                    ctr = 1;
+                }
+            }
+            if (ctr == 0)
+            {
+                atoms += var;
+            }
+        }
+    }
+    truthValues = new int[atoms.length()];
+    for (int i = 0; i < atoms.length(); i++)
+    {
+        cout << "Enter truth value of " << atoms[i] << " ";
+        cin >> truthValues[i];
+        cout << "\n";
+    }
+    cout << "\n";
     result *tree = infixToParseTree(expression);
     atomAssignment(tree->root);
     truthValue(tree->root);
+    cout << "The truth value is: ";
     cout << tree->root->truth;
     return 0;
 }
