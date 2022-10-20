@@ -5,15 +5,16 @@
 #include "./functionalities/node.h"
 
 using namespace std;
-
+/// @brief a structure named result.It contains a pointer to struct node and an integer.
 struct result
 {
     node *root;
     int count;
 };
 
-// Task 0: Infix expression (fully bracketed) to rooted binary parse tree
-
+/// @brief Task 0: Infix expression (fully bracketed) to rooted binary parse tree
+/// @param expression it takes the infix expression as a string.
+/// @return returns a pointer to a result struct which has the pointer to the root node of the parse tree created.The integer count keeps a track of which character of the infix expression string is being traversed right now.
 result *infixToParseTree(string expression)
 {
     node *head = new node;
@@ -115,10 +116,8 @@ result *infixToParseTree(string expression)
     return new result{head, i};
 }
 
-// Task 1: Infix expression (fully bracketed) to prefix notation
-
-// Preorder traversal of the parse tree
-
+///@brief Task 1: Infix expression (fully bracketed) to prefix notation.Preorder traversal of the parse tree
+///@param expression we pass a pointer to the root node of the parse tree.
 void printPreorder(node *head)
 {
     if (head != nullptr)
@@ -128,7 +127,9 @@ void printPreorder(node *head)
         printPreorder(head->right);
     }
 }
-
+/// @brief function to convert infix expression to prefix expression.
+/// @param expression Takes the infix expression as a string.
+/// @return returns
 result *infixToPrefix(string expression)
 {
     result *tree = infixToParseTree(expression);
@@ -136,8 +137,9 @@ result *infixToPrefix(string expression)
     return tree;
 }
 
-// Task 2: converting prefix notation to parse tree
-
+/// @brief function to make a parse tree from given prefix expression.
+/// @param expression prefix expression as a string is taken as the argument.
+/// @return returns the pointer to a result struct which contains the pointer to the root node of the parse tree.The integer count is used to keep track of which character of the string for the expression is to be used.
 result *prefixToParseTree(string expression)
 {
     int success = 0;
@@ -251,8 +253,8 @@ result *prefixToParseTree(string expression)
     return new result{head, i};
 }
 
-// Task 3: Outputting the parse tree in infix notation using inorder traversal
-
+/// @brief Task 3: Outputting the parse tree in infix notation using inorder traversal
+/// @param head the pointer to the root node of the parse tree is passed as an argument
 void printInorder(node *head)
 {
     if (head != nullptr)
@@ -263,8 +265,8 @@ void printInorder(node *head)
     }
 }
 
-// Extra: Postorder traversal of the parse tree
-
+/// @brief Extra: Postorder traversal of the parse tree
+/// @param head the pointer to the root node of the parse tree is passed as the argument.
 void printPostorder(node *head)
 {
     if (head != nullptr)
@@ -275,8 +277,9 @@ void printPostorder(node *head)
     }
 }
 
-// Task 4: computing the height of the parse tree
-
+/// @brief Task 4: computing the height of the parse tree
+/// @param head the pointer to the root node of the parse tree is passed as the argument.
+/// @return returns the height of the parse tree as an integer.
 int heightOfParseTree(node *head)
 {
     int height = 1;
@@ -292,8 +295,11 @@ int heightOfParseTree(node *head)
     return height;
 }
 
-// Task 5: evaulaing the truth value of the expression
-
+/// @brief Task 5: evaulaing the truth value of the expression
+/// @param head the pointer to the root node of the parse tree is passed as the argument.
+/// @param truthValues an array of boolean values storing the truth values of all the atoms
+/// @param uniqueChars a string comprising of all the unique characters of the expression
+/// @return the truth value obtained by the traversal of the parse tree.
 bool evaluteParseTree(node *head, bool *truthValues, string uniqueChars)
 {
     bool result = false;
@@ -327,7 +333,9 @@ bool evaluteParseTree(node *head, bool *truthValues, string uniqueChars)
     }
     return result;
 }
-
+/// @brief function to evaluate the truth value of the expression given in in fix notation as a string and return it as a boolean value.
+/// @param expression the infix expression in the form of a string is passed as an argument.
+/// @return returns the evaluated truth value of the expression passed.
 bool evaluateExpression(string expression)
 {
     string uniqueChars = utils::uniqueAtoms(expression);
@@ -336,7 +344,8 @@ bool evaluateExpression(string expression)
     bool result = evaluteParseTree(parseTree->root, truthValues, uniqueChars);
     return result;
 }
-
+/// @brief function to print the truth table of a given logical expression.
+/// @param expression the logical expression in infix form is passed as a string.
 void showTruthTable(string expression)
 {
     string uniqueChars = utils::uniqueAtoms(expression);
