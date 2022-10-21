@@ -16,17 +16,17 @@
 
 using namespace std;
 
-///@brief This is the class for a node of the parse tree.Each node of the parse tree will contain the name of the operator or the operand stored in it,pointers to the root nodes of the left and right subtrees of that node.Boolean values for telling us whether the value of the node is filled,the left subtree's root node value is filled,the right subtree's root node value is filled, a boolean value for the truth value of the value stored in the node and another boolean value to tell whether the current node value has been assigned a truth value or not.
+///@brief This is the class for a node of the parse tree. Each node of the parse tree will contain the name of the operator or the operand stored in it, pointers to the root nodes of the left and right subtrees of that node. Boolean values for telling us whether the value of the node is filled, the left subtree's root node value is filled, the right subtree's root node value is filled, a boolean value for the truth value of the value stored in the node and another boolean value to tell whether the current node value has been assigned a truth value or not.
 
 class node
 {
 public:
-    char data;        /*!< this is the name of the data in the node.Eg- 'p','q','+','*','~','>'*/
-    node *left;       /*!< this is a pointer to the node of the root of the left subtree of the current node*/
-    node *right;      /*!< this is a pointer to the node of the root of the right subtree of the current node*/
-    bool isFilled;    /*!< boolean for checking whether the current node has a value assigned to it's data variable or not*/
-    bool rightFilled; /*!< boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
-    bool leftFilled;  /*!< boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
+    char data;        /*!< This is the name of the data in the node. Eg- 'p','q','+','*','~','>'*/
+    node *left;       /*!< This is a pointer to the node of the root of the left subtree of the current node*/
+    node *right;      /*!< This is a pointer to the node of the root of the right subtree of the current node*/
+    bool isFilled;    /*!< Boolean for checking whether the current node has a value assigned to it's data variable or not*/
+    bool rightFilled; /*!< Boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
+    bool leftFilled;  /*!< Boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
 
     node(); /*!< This is the constructor*/
     int fillLeft(node *Node);
