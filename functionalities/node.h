@@ -16,7 +16,7 @@
 
 using namespace std;
 
-///@brief brief description This is the class for a node of the parse tree.Each node of the parse tree will contain the name of the operator or the operand stored in it,pointers to the root nodes of the left and right subtrees of that node.boolean values for telling us whether the value of the node is filled,the left subtree's root node value is filled,the right subtree's root node value is filled, a boolean value for the truth value of the value stored in the node and another boolean value to tell whether the current node value has been assigned a truth value or not.
+///@brief This is the class for a node of the parse tree.Each node of the parse tree will contain the name of the operator or the operand stored in it,pointers to the root nodes of the left and right subtrees of that node.Boolean values for telling us whether the value of the node is filled,the left subtree's root node value is filled,the right subtree's root node value is filled, a boolean value for the truth value of the value stored in the node and another boolean value to tell whether the current node value has been assigned a truth value or not.
 
 class node
 {

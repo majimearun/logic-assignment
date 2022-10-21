@@ -13,7 +13,7 @@
 
 #include "node.h"
 
-/// @brief this is the utility class which contains most of the functions we will be using in our code.
+/// @brief This is the utility class which contains most of the functions we will be using in our code.
 class utils
 {
 public:
