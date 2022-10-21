@@ -6,6 +6,14 @@ Main test expression: `~((r+(s+a))*((~p)*q))`
 
 ## Compiling Commands
 
+Use already compiled files/binaries (only linux supported). Example:
+
+```bash
+./task1
+```
+
+(or)
+
 Follow format in `tasks.json` file.
 
 (or)
