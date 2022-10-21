@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operators_0',['operators',['../utlils_8cpp.html#a03b5852b1d608f6a7f4de30a3c5574c7',1,'utlils.cpp']]],
-  ['oroperator_1',['orOperator',['../task5_8cpp.html#abb81e3647aaa5b47ef92cbbdac88577c',1,'task5.cpp']]]
+  ['operators_0',['operators',['../namespacemake_test_cases.html#a053154ec7d7e04c3e609ca75d59bb831',1,'makeTestCases.operators()'],['../utils_8cpp.html#a03b5852b1d608f6a7f4de30a3c5574c7',1,'operators():&#160;utils.cpp']]]
 ];

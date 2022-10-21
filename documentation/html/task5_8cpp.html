@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LogicAssignment: task5.cpp File Reference</title>
+<title>Logic Assignment: task5.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogicAssignment
+   <div id="projectname">Logic Assignment
    </div>
   </td>
  </tr>
@@ -90,187 +90,41 @@ $(document).ready(function(){initNavTree('task5_8cpp.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">task5.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="node_8h_source.html">./functionalities/node.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="utils_8h_source.html">./functionalities/utils.h</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">./functionalities/utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="node_8h_source.html">./functionalities/node.h</a>&quot;</code><br />
 </div>
 <p><a href="task5_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structresult.html">result</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure named result.It contains a pointer to struct node and an integer.  <a href="structresult.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aecde2a86956cd9cbeb2c96334e4ef663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structresult.html">result</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#aecde2a86956cd9cbeb2c96334e4ef663">infixToParseTree</a> (string expression)</td></tr>
-<tr class="separator:aecde2a86956cd9cbeb2c96334e4ef663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f478468594b1d5ad2fc45481ddb645a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#a2f478468594b1d5ad2fc45481ddb645a">implicationOperator</a> (<a class="el" href="classnode.html">node</a> *left, <a class="el" href="classnode.html">node</a> *right)</td></tr>
-<tr class="separator:a2f478468594b1d5ad2fc45481ddb645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b568516dbc254cc1d1506c2b7da5a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#ac9b568516dbc254cc1d1506c2b7da5a8">andOperator</a> (<a class="el" href="classnode.html">node</a> *left, <a class="el" href="classnode.html">node</a> *right)</td></tr>
-<tr class="separator:ac9b568516dbc254cc1d1506c2b7da5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb81e3647aaa5b47ef92cbbdac88577c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#abb81e3647aaa5b47ef92cbbdac88577c">orOperator</a> (<a class="el" href="classnode.html">node</a> *left, <a class="el" href="classnode.html">node</a> *right)</td></tr>
-<tr class="separator:abb81e3647aaa5b47ef92cbbdac88577c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af66f5097ed398e86d62b30198be46bf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#af66f5097ed398e86d62b30198be46bf8">notOperator</a> (<a class="el" href="classnode.html">node</a> *right)</td></tr>
-<tr class="separator:af66f5097ed398e86d62b30198be46bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59ace945e86febdbac2b82ac59171b7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#a59ace945e86febdbac2b82ac59171b7e">assignValue</a> (<a class="el" href="classnode.html">node</a> *head, string atoms, bool *truthValues)</td></tr>
-<tr class="separator:a59ace945e86febdbac2b82ac59171b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac3e9c4762019f67169998d3394ba173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#aac3e9c4762019f67169998d3394ba173">atomAssignment</a> (<a class="el" href="classnode.html">node</a> *head, string atoms, bool *truthValues)</td></tr>
-<tr class="separator:aac3e9c4762019f67169998d3394ba173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be7bcb1a3f57793fabd5c1e2fd52394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#a3be7bcb1a3f57793fabd5c1e2fd52394">truthValue</a> (<a class="el" href="classnode.html">node</a> *head)</td></tr>
-<tr class="separator:a3be7bcb1a3f57793fabd5c1e2fd52394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa88b0250f8a51877e9dc1fe6f5119ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#afa88b0250f8a51877e9dc1fe6f5119ea">evaluteParseTree</a> (<a class="el" href="classnode.html">node</a> *head, bool *truthValues, string uniqueChars)</td></tr>
+<tr class="memdesc:afa88b0250f8a51877e9dc1fe6f5119ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print the truth value obtained by evaluating the passed logical expression with the help of the parse tree of the expression.  <a href="task5_8cpp.html#afa88b0250f8a51877e9dc1fe6f5119ea">More...</a><br /></td></tr>
+<tr class="separator:afa88b0250f8a51877e9dc1fe6f5119ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df664426c86ffdb838bc611e63b45c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#a0df664426c86ffdb838bc611e63b45c0">evaluateExpression</a> (string expression)</td></tr>
+<tr class="memdesc:a0df664426c86ffdb838bc611e63b45c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to evaluate the truth value of the expression given in infix notation as a string and return it as a boolean value.  <a href="task5_8cpp.html#a0df664426c86ffdb838bc611e63b45c0">More...</a><br /></td></tr>
+<tr class="separator:a0df664426c86ffdb838bc611e63b45c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d594fcafe34f47655beedad34d1e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#a52d594fcafe34f47655beedad34d1e38">showTruthTable</a> (string expression)</td></tr>
+<tr class="memdesc:a52d594fcafe34f47655beedad34d1e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print the truth table of a given logical expression.  <a href="task5_8cpp.html#a52d594fcafe34f47655beedad34d1e38">More...</a><br /></td></tr>
+<tr class="separator:a52d594fcafe34f47655beedad34d1e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="task5_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac9b568516dbc254cc1d1506c2b7da5a8" name="ac9b568516dbc254cc1d1506c2b7da5a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b568516dbc254cc1d1506c2b7da5a8">&#9670;&#160;</a></span>andOperator()</h2>
+<a id="a0df664426c86ffdb838bc611e63b45c0" name="a0df664426c86ffdb838bc611e63b45c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df664426c86ffdb838bc611e63b45c0">&#9670;&#160;</a></span>evaluateExpression()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool andOperator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00128">128</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a59ace945e86febdbac2b82ac59171b7e" name="a59ace945e86febdbac2b82ac59171b7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59ace945e86febdbac2b82ac59171b7e">&#9670;&#160;</a></span>assignValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void assignValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>head</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>atoms</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>truthValues</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00161">161</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aac3e9c4762019f67169998d3394ba173" name="aac3e9c4762019f67169998d3394ba173"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac3e9c4762019f67169998d3394ba173">&#9670;&#160;</a></span>atomAssignment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void atomAssignment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>head</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>atoms</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>truthValues</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00171">171</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a2f478468594b1d5ad2fc45481ddb645a" name="a2f478468594b1d5ad2fc45481ddb645a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f478468594b1d5ad2fc45481ddb645a">&#9670;&#160;</a></span>implicationOperator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool implicationOperator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00117">117</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aecde2a86956cd9cbeb2c96334e4ef663" name="aecde2a86956cd9cbeb2c96334e4ef663"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecde2a86956cd9cbeb2c96334e4ef663">&#9670;&#160;</a></span>infixToParseTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structresult.html">result</a> * infixToParseTree </td>
+          <td class="memname">bool evaluateExpression </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>expression</em></td><td>)</td>
@@ -279,7 +133,63 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00016">16</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
+<p>Function to evaluate the truth value of the expression given in infix notation as a string and return it as a boolean value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>The infix expression in the form of a string is passed as an argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the evaluated truth value of the expression passed. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00050">50</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afa88b0250f8a51877e9dc1fe6f5119ea" name="afa88b0250f8a51877e9dc1fe6f5119ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa88b0250f8a51877e9dc1fe6f5119ea">&#9670;&#160;</a></span>evaluteParseTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool evaluteParseTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>truthValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>uniqueChars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to print the truth value obtained by evaluating the passed logical expression with the help of the parse tree of the expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The pointer to the root node of the parse tree is passed as an argument. </td></tr>
+    <tr><td class="paramname">truthValues</td><td>An array of boolean values storing the truth values of all the atoms in the given expression is passed as an argument. </td></tr>
+    <tr><td class="paramname">uniqueChars</td><td>A string comprising of all the unique characters of the expression is passed as an argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The truth value obtained by evaluating the parse tree. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00014">14</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,77 +208,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00250">250</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00082">82</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
 
 </div>
 </div>
-<a id="af66f5097ed398e86d62b30198be46bf8" name="af66f5097ed398e86d62b30198be46bf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af66f5097ed398e86d62b30198be46bf8">&#9670;&#160;</a></span>notOperator()</h2>
+<a id="a52d594fcafe34f47655beedad34d1e38" name="a52d594fcafe34f47655beedad34d1e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d594fcafe34f47655beedad34d1e38">&#9670;&#160;</a></span>showTruthTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool notOperator </td>
+          <td class="memname">void showTruthTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>right</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00150">150</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
+<p>Function to print the truth table of a given logical expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>The logical expression in infix form is passed as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="abb81e3647aaa5b47ef92cbbdac88577c" name="abb81e3647aaa5b47ef92cbbdac88577c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb81e3647aaa5b47ef92cbbdac88577c">&#9670;&#160;</a></span>orOperator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool orOperator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00139">139</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a3be7bcb1a3f57793fabd5c1e2fd52394" name="a3be7bcb1a3f57793fabd5c1e2fd52394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be7bcb1a3f57793fabd5c1e2fd52394">&#9670;&#160;</a></span>truthValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void truthValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>head</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00215">215</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="task5_8cpp_source.html#l00061">61</a> of file <a class="el" href="task5_8cpp_source.html">task5.cpp</a>.</p>
 
 </div>
 </div>
