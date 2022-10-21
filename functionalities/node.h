@@ -21,14 +21,12 @@ using namespace std;
 class node
 {
 public:
-    char data;            /*!< this is the name of the data in the node.Eg- 'p','q','+','*','~','>'*/
-    node *left;           /*!< this is a pointer to the node of the root of the left subtree of the current node*/
-    node *right;          /*!< this is a pointer to the node of the root of the right subtree of the current node*/
-    bool isFilled;        /*!< boolean for checking whether the current node has a value assigned to it's data variable or not*/
-    bool rightFilled;     /*!< boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
-    bool leftFilled;      /*!< boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
-    bool truth;           /*!< the truth value assigned to the node. 0 for false and 1 for true.In case the data value is an operator then it gets the truth value obtained by parsing the tree of which it is a root of.*/
-    bool isTruthAssigned; /*!< checks whether the node has been assigned a truth value or not.*/
+    char data;        /*!< this is the name of the data in the node.Eg- 'p','q','+','*','~','>'*/
+    node *left;       /*!< this is a pointer to the node of the root of the left subtree of the current node*/
+    node *right;      /*!< this is a pointer to the node of the root of the right subtree of the current node*/
+    bool isFilled;    /*!< boolean for checking whether the current node has a value assigned to it's data variable or not*/
+    bool rightFilled; /*!< boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
+    bool leftFilled;  /*!< boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
 
     node(); /*!< This is the constructor*/
     int fillLeft(node *Node);

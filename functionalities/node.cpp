@@ -22,8 +22,6 @@ node::node()
     isFilled = false;
     rightFilled = false;
     leftFilled = false;
-    truth = false;
-    isTruthAssigned = false;
 }
 /// @brief Function to fill the root node of the left subtree of the current node.
 /// @param Node The pointer to the node which is going to be the root node of the left subtree.
