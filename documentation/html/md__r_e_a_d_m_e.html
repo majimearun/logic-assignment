@@ -92,8 +92,16 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
   <div class="headertitle"><div class="title">CS F214: Logic Assignment 1 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >Submission for CS F214: Logic course assignment 1: Parse Tress</p>
-<p >Main test expression: ~((r+(s+a))*((~p)*q)) </p>
+<div class="textblock"><p >Submission for CS F214: Logic assignment 1: Parse Trees</p>
+<p >Main test expression: <code>~((r+(s+a))*((~p)*q))</code></p>
+<p >Use already compiled files/binaries (only linux supported). Example:</p>
+<div class="fragment"><div class="line">./task1</div>
+</div><!-- fragment --><p >(or)</p>
+<p >Follow format in <code>tasks.json</code> file.</p>
+<p >(or)</p>
+<p >compile all the task file along with all header <code>(*.h)</code> and cpp <code>(*cpp)</code> files in the functionalities folder:</p>
+<div class="fragment"><div class="line">g++ -o &lt;task&gt; &lt;task&gt;.cpp ./functionalities/utils.h ./functionalities/utils.cpp ./functionalities/node.cpp ./functionalities/node.cpp</div>
+</div><!-- fragment --><p >CSV file with analysis of code in -O1 and -O3 optimizations: <a href="https://github.com/majimearun/logic_assignment_1/blob/main/analysis/analysis.csv">analysis.csv</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
