@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LogicAssignment: utils Class Reference</title>
+<title>Logic Assignment: utils Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LogicAssignment
+   <div id="projectname">Logic Assignment
    </div>
   </td>
  </tr>
@@ -104,16 +104,17 @@ $(document).ready(function(){initNavTree('classutils.html',''); initResizable();
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9091d74d142f6b38936718ead6914706"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a9091d74d142f6b38936718ead6914706">isOperator</a> (char c)</td></tr>
-<tr class="memdesc:a9091d74d142f6b38936718ead6914706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functin to check whether the passed character is a member of the operators array or not.  <a href="classutils.html#a9091d74d142f6b38936718ead6914706">More...</a><br /></td></tr>
+<tr class="memdesc:a9091d74d142f6b38936718ead6914706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check whether the passed character is a member of the operators array or not.  <a href="classutils.html#a9091d74d142f6b38936718ead6914706">More...</a><br /></td></tr>
 <tr class="separator:a9091d74d142f6b38936718ead6914706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcc137d1d7b88aaa3762063f1d1db89"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#affcc137d1d7b88aaa3762063f1d1db89">isBracket</a> (char c)</td></tr>
+<tr class="memdesc:affcc137d1d7b88aaa3762063f1d1db89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the passed character is a bracket( '(' or ')' ) or not.  <a href="classutils.html#affcc137d1d7b88aaa3762063f1d1db89">More...</a><br /></td></tr>
+<tr class="separator:affcc137d1d7b88aaa3762063f1d1db89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a540f3d09749350919253ab670b6f8fd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a540f3d09749350919253ab670b6f8fd7">make_truthtable</a> (int **arr, int ncol, int nrow, int column, int step)</td></tr>
 <tr class="memdesc:a540f3d09749350919253ab670b6f8fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to populate the truth table with truth values.  <a href="classutils.html#a540f3d09749350919253ab670b6f8fd7">More...</a><br /></td></tr>
 <tr class="separator:a540f3d09749350919253ab670b6f8fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1032992a41ea7fb16c7b940e1a83f7c4"><td class="memItemLeft" align="right" valign="top">static int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a1032992a41ea7fb16c7b940e1a83f7c4">truthTable</a> (int nvar)</td></tr>
 <tr class="memdesc:a1032992a41ea7fb16c7b940e1a83f7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make the truth table corresponding to the number of variables in the logical expression.  <a href="classutils.html#a1032992a41ea7fb16c7b940e1a83f7c4">More...</a><br /></td></tr>
 <tr class="separator:a1032992a41ea7fb16c7b940e1a83f7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b70a6a2f29b58bce070b18f9442f56b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a8b70a6a2f29b58bce070b18f9442f56b">implicationOperator</a> (<a class="el" href="classnode.html">node</a> *left, <a class="el" href="classnode.html">node</a> *right)</td></tr>
-<tr class="separator:a8b70a6a2f29b58bce070b18f9442f56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef454f9d0a8e26d3525a2b20829b86cb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#aef454f9d0a8e26d3525a2b20829b86cb">uniqueAtoms</a> (string expression)</td></tr>
 <tr class="memdesc:aef454f9d0a8e26d3525a2b20829b86cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to identify the unique variables in the given propositional logic formula.  <a href="classutils.html#aef454f9d0a8e26d3525a2b20829b86cb">More...</a><br /></td></tr>
 <tr class="separator:aef454f9d0a8e26d3525a2b20829b86cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,11 +124,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a52b8a7670726d790af3b2eff13bd155c"><td class="memItemLeft" align="right" valign="top">static bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a52b8a7670726d790af3b2eff13bd155c">assignTruthValues</a> (string uniqueChars, int *row)</td></tr>
 <tr class="memdesc:a52b8a7670726d790af3b2eff13bd155c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to assign truth values to a row of the truth table.  <a href="classutils.html#a52b8a7670726d790af3b2eff13bd155c">More...</a><br /></td></tr>
 <tr class="separator:a52b8a7670726d790af3b2eff13bd155c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16140cfd54dfa67d8695c9b9fbd8c207"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structresult.html">result</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">infixToParseTree</a> (string expression)</td></tr>
+<tr class="memdesc:a16140cfd54dfa67d8695c9b9fbd8c207"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to take in the infix expression of a logical formula as a string and make a parse tree.  <a href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">More...</a><br /></td></tr>
+<tr class="separator:a16140cfd54dfa67d8695c9b9fbd8c207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19286bf758dbc2c677b06985f16a50bb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a19286bf758dbc2c677b06985f16a50bb">printInorder</a> (<a class="el" href="classnode.html">node</a> *head)</td></tr>
+<tr class="memdesc:a19286bf758dbc2c677b06985f16a50bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print the infix expression by inorder traversal of the parse tree.  <a href="classutils.html#a19286bf758dbc2c677b06985f16a50bb">More...</a><br /></td></tr>
+<tr class="separator:a19286bf758dbc2c677b06985f16a50bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea245b31a445973ddbacc7879dbd42ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#aea245b31a445973ddbacc7879dbd42ce">printPreorder</a> (<a class="el" href="classnode.html">node</a> *head)</td></tr>
+<tr class="memdesc:aea245b31a445973ddbacc7879dbd42ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert an infix expression into a prefix expression by preorder traversal of the parse tree.  <a href="classutils.html#aea245b31a445973ddbacc7879dbd42ce">More...</a><br /></td></tr>
+<tr class="separator:aea245b31a445973ddbacc7879dbd42ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58b2f4c883ee5317fad053bef3fe58a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#ac58b2f4c883ee5317fad053bef3fe58a">printPostorder</a> (<a class="el" href="classnode.html">node</a> *head)</td></tr>
+<tr class="memdesc:ac58b2f4c883ee5317fad053bef3fe58a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print the post order expression by post order traversal of the parse tree.  <a href="classutils.html#ac58b2f4c883ee5317fad053bef3fe58a">More...</a><br /></td></tr>
+<tr class="separator:ac58b2f4c883ee5317fad053bef3fe58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa360312c3998249e962d18a382258554"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#aa360312c3998249e962d18a382258554">readFile</a> (string filename)</td></tr>
+<tr class="memdesc:aa360312c3998249e962d18a382258554"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to read a file whose address is passed as an argument to the function.  <a href="classutils.html#aa360312c3998249e962d18a382258554">More...</a><br /></td></tr>
+<tr class="separator:aa360312c3998249e962d18a382258554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This is the utility class which contains most of the functions we will be using in our code. </p>
 
-<p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00017">17</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8h_source.html#l00025">25</a> of file <a class="el" href="utils_8h_source.html">utils.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9eaf7ae64428e9bd2cde03b1ad221802" name="a9eaf7ae64428e9bd2cde03b1ad221802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9eaf7ae64428e9bd2cde03b1ad221802">&#9670;&#160;</a></span>assignTruthValues() <span class="overload">[1/2]</span></h2>
@@ -162,7 +178,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns an array of the truth values of all the variables in the expression. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00111">111</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00118">118</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,12 +226,12 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An array of truth values for all variables for one row of the truth table. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00126">126</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00133">133</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a8b70a6a2f29b58bce070b18f9442f56b" name="a8b70a6a2f29b58bce070b18f9442f56b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b70a6a2f29b58bce070b18f9442f56b">&#9670;&#160;</a></span>implicationOperator()</h2>
+<a id="a16140cfd54dfa67d8695c9b9fbd8c207" name="a16140cfd54dfa67d8695c9b9fbd8c207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16140cfd54dfa67d8695c9b9fbd8c207">&#9670;&#160;</a></span>infixToParseTree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,21 +240,11 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool utils::implicationOperator </td>
+          <td class="memname"><a class="el" href="structresult.html">result</a> * utils::infixToParseTree </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -247,6 +253,54 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A function to take in the infix expression of a logical formula as a string and make a parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>It takes the infix expression as a string as an argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a pointer to a result struct which has the pointer to the root node of the parse tree created. The integer count keeps a track of which character of the infix expression string is being traversed right now. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00146">146</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="affcc137d1d7b88aaa3762063f1d1db89" name="affcc137d1d7b88aaa3762063f1d1db89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affcc137d1d7b88aaa3762063f1d1db89">&#9670;&#160;</a></span>isBracket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool utils::isBracket </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether the passed character is a bracket( '(' or ')' ) or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The character to be checked for being a bracket. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false if c is not a bracket and true if it is a brakcet. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00044">44</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +328,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Functin to check whether the passed character is a member of the operators array or not. </p>
+<p>Function to check whether the passed character is a member of the operators array or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>The character to be checked for being an operator is passed as an argument. </td></tr>
@@ -283,7 +337,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns false if c is not an operator and true if it is an operator. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00023">23</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00030">30</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -346,12 +400,157 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">ncol</td><td>The number of columns in the truth table. </td></tr>
     <tr><td class="paramname">nrow</td><td>The number of rows in the truth table. </td></tr>
     <tr><td class="paramname">column</td><td>The column which is being filled currently. </td></tr>
-    <tr><td class="paramname">step</td><td>The number of rows after which the value being filled will be changed.Eg-step value of 1 means the value will be changed every other row,ie 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows.ie 0 0 1 1 0 0 1 1...and so on. </td></tr>
+    <tr><td class="paramname">step</td><td>The number of rows after which the value being filled will be changed. Eg- Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00072">72</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00079">79</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a19286bf758dbc2c677b06985f16a50bb" name="a19286bf758dbc2c677b06985f16a50bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19286bf758dbc2c677b06985f16a50bb">&#9670;&#160;</a></span>printInorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utils::printInorder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to print the infix expression by inorder traversal of the parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The pointer to the root node of the parse tree is passed as the argument </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00249">249</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac58b2f4c883ee5317fad053bef3fe58a" name="ac58b2f4c883ee5317fad053bef3fe58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58b2f4c883ee5317fad053bef3fe58a">&#9670;&#160;</a></span>printPostorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utils::printPostorder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to print the post order expression by post order traversal of the parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The pointer to the root node of the parse tree is passed as the argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00273">273</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aea245b31a445973ddbacc7879dbd42ce" name="aea245b31a445973ddbacc7879dbd42ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea245b31a445973ddbacc7879dbd42ce">&#9670;&#160;</a></span>printPreorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utils::printPreorder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode.html">node</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to convert an infix expression into a prefix expression by preorder traversal of the parse tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>We pass a pointer to the root node of the parse tree. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00261">261</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa360312c3998249e962d18a382258554" name="aa360312c3998249e962d18a382258554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa360312c3998249e962d18a382258554">&#9670;&#160;</a></span>readFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string utils::readFile </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function is used to read a file whose address is passed as an argument to the function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The relative file path is passed as an argument to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>It returns the file content as a string. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00285">285</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +587,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the truth table as a pointer to an integer array. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00048">48</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00055">55</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -425,13 +624,13 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns a string of all the variables in the string expression. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="utlils_8cpp_source.html#l00092">92</a> of file <a class="el" href="utlils_8cpp_source.html">utlils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00099">99</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>functionalities/<a class="el" href="utils_8h_source.html">utils.h</a></li>
-<li>functionalities/<a class="el" href="utlils_8cpp_source.html">utlils.cpp</a></li>
+<li>functionalities/<a class="el" href="utils_8cpp_source.html">utils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

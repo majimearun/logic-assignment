@@ -279,8 +279,11 @@ void utils::printPostorder(node *head)
         cout << head->data;
     }
 }
-
-string utils::readFile(string filename){
+/// @brief This function is used to read a file whose address is passed as an argument to the function.
+/// @param filename The relative file path is passed as an argument to the function.
+/// @return It returns the file content as a string.
+string utils::readFile(string filename)
+{
     ifstream file;
     file.open(filename);
     string expression;
