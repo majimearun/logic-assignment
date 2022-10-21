@@ -73,22 +73,22 @@ void showTruthTable(string expression)
             cout << uniqueChars[j] << " = " << truthValues[j] << ", ";
         }
         cout << "Result = " << result << endl;
+        delete parseTree;
+        delete truthValues;
     }
+    delete table;
 }
 
 int main()
 {
-    string expression;
+    string expression = "~((r+(s+a))*((~p)*q))";
     cout << "Task 5: evaulaing the truth value of the expression" << endl;
-    cout << "Enter the infix expression (fully bracketed): ";
-    cin >> expression;
+    cout << "Expression is: " << expression << endl;
     bool truth = evaluateExpression(expression);
+
     cout << "The truth value of the expression is: " << truth << endl;
     cout << "--------------------------------------------" << endl;
-
     cout << "Evaluating whole truth table for expression:" << endl;
-    cout << "Enter the infix expression (fully bracketed): ";
-    cin >> expression;
     showTruthTable(expression);
     return 0;
 }

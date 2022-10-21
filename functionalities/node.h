@@ -32,5 +32,6 @@ public:
     int fillLeft(node *Node);
     int fillRight(node *Node);
     int fill(char data);
+    ~node(); /*!< This is the destructor*/
 };
 #endif

@@ -73,3 +73,10 @@ int node::fill(char data)
         return -1;
     }
 }
+
+/// @brief The destructor for the node class.
+node::~node()
+{
+    delete left;
+    delete right;
+}

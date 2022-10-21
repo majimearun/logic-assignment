@@ -11,10 +11,17 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+#include <fstream>
+#include <istream>
 #include "utils.h"
 #include "node.h"
 
 using namespace std;
+
+result::~result()
+{
+    delete root;
+} /*!< This is the destructor for struct result*/
 
 char operators[4] = {'~', '*', '+', '>'}; /*!<Character array of all the operators we are going to be dealing with*/
 /// @brief Function to check whether the passed character is a member of the operators array or not.
@@ -271,4 +278,13 @@ void utils::printPostorder(node *head)
         printPostorder(head->right);
         cout << head->data;
     }
+}
+
+string utils::readFile(string filename){
+    ifstream file;
+    file.open(filename);
+    string expression;
+    file >> expression;
+    file.close();
+    return expression;
 }

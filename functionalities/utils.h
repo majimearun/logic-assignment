@@ -17,7 +17,10 @@ struct result
 {
     node *root;
     int count;
+
+    ~result();
 };
+
 /// @brief This is the utility class which contains most of the functions we will be using in our code.
 class utils
 {
@@ -33,6 +36,7 @@ public:
     static void printInorder(node *head);
     static void printPreorder(node *head);
     static void printPostorder(node *head);
+    static string readFile(string filename);
 };
 
 #endif
