@@ -17,7 +17,7 @@
 using namespace std;
 
 char operators[4] = {'~', '*', '+', '>'}; /*!<Character array of all the operators we are going to be dealing with*/
-/// @brief Functin to check whether the passed character is a member of the operators array or not.
+/// @brief Function to check whether the passed character is a member of the operators array or not.
 /// @param c The character to be checked for being an operator is passed as an argument.
 /// @return Returns false if c is not an operator and true if it is an operator.
 bool utils::isOperator(char c)
@@ -68,7 +68,7 @@ int **utils::truthTable(int nvar)
 /// @param ncol The number of columns in the truth table.
 /// @param nrow The number of rows in the truth table.
 /// @param column The column which is being filled currently.
-/// @param step The number of rows after which the value being filled will be changed.Eg-step value of 1 means the value will be changed every other row,ie 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows.ie 0 0 1 1 0 0 1 1...and so on.
+/// @param step The number of rows after which the value being filled will be changed. Eg- Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on.
 void utils::make_truthtable(int **arr, int ncol, int nrow, int column, int step)
 {
     if (column == ncol)

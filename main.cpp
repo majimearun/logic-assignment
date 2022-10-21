@@ -5,7 +5,7 @@
 #include "./functionalities/node.h"
 
 using namespace std;
-/// @brief A structure named result.It contains a pointer to struct node and an integer.
+/// @brief A structure named result. It contains a pointer to struct node and an integer.
 struct result
 {
     node *root;
