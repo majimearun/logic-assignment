@@ -3,16 +3,16 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe build active file",
-			"command": "D:\\programming\\cpp\\mingw64\\bin\\g++.exe",
+			"label": "C/C++: g++ build active file",
+			"command": "/usr/bin/g++",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
-				"${fileDirname}\\functionalities\\*.cpp",
-				"${fileDirname}\\functionalities\\*.h",
+				"${fileDirname}/functionalities/*.cpp",
+				"${fileDirname}/functionalities/*.h",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}/${fileBasenameNoExtension}"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -22,7 +22,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: D:\\programming\\cpp\\mingw64\\bin\\g++.exe"
+			"detail": "compiler: /usr/bin/g++"
 		}
 	]
 }

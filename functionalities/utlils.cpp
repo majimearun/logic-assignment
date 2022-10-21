@@ -132,3 +132,143 @@ bool *utils::assignTruthValues(string uniqueChars, int *row)
     }
     return truthValues;
 }
+
+/// @brief A function to take in the infix expression of a logical formula as a string and make a parse tree.
+/// @param expression It takes the infix expression as a string as an argument.
+/// @return Returns a pointer to a result struct which has the pointer to the root node of the parse tree created. The integer count keeps a track of which character of the infix expression string is being traversed right now.
+result *utils::infixToParseTree(string expression)
+{
+    node *head = new node;
+    bool end = false;
+    int i = 0;
+    while (!end)
+    {
+        char var = expression[i];
+        if (!utils::isBracket(var))
+        {
+            if (!utils::isOperator(var))
+            {
+                if (head->isFilled)
+                {
+                    if (head->data != '~')
+                    {
+                        if (head->leftFilled)
+                        {
+                            node *right = new node;
+                            right->data = var;
+                            head->fillRight(right);
+                        }
+                        else
+                        {
+                            node *left = new node;
+                            left->data = var;
+                            head->fillLeft(left);
+                        }
+                    }
+                    else
+                    {
+                        node *right = new node;
+                        right->data = var;
+                        head->fillRight(right);
+                        head->leftFilled = true;
+                    }
+                }
+                else
+                {
+                    head->data = var;
+                    head->isFilled = true;
+                }
+            }
+            else
+            {
+                if (!(head->isFilled))
+                {
+                    head->fill(var);
+                }
+                else
+                {
+                    node *temp = new node;
+
+                    temp->left = head;
+                    temp->leftFilled = true;
+                    head = temp;
+                    head->fill(var);
+                }
+            }
+        }
+        else
+        {
+            if (var == '(')
+            {
+                if (head->data != '~')
+                {
+                    if (head->leftFilled)
+                    {
+                        result *temp = infixToParseTree(expression.substr(i + 1));
+                        head->fillRight(temp->root);
+                        i += temp->count;
+                    }
+                    else
+                    {
+                        result *temp = infixToParseTree(expression.substr(i + 1));
+                        head->fillLeft(temp->root);
+                        i += temp->count;
+                    }
+                }
+                else
+                {
+                    result *temp = infixToParseTree(expression.substr(i + 1));
+                    head->fillRight(temp->root);
+                    i += temp->count;
+                    head->leftFilled = true;
+                }
+            }
+            else
+            {
+                end = true;
+            }
+        }
+        if (i >= expression.length())
+        {
+            end = true;
+        }
+        i++;
+    }
+    return new result{head, i};
+}
+
+/// @brief Function to print the infix expression by inorder traversal of the parse tree.
+/// @param head The pointer to the root node of the parse tree is passed as the argument
+void utils::printInorder(node *head)
+{
+    if (head != nullptr)
+    {
+        printInorder(head->left);
+        cout << head->data;
+        printInorder(head->right);
+    }
+}
+
+///@brief Function to convert an infix expression into a prefix expression by preorder traversal of the parse tree.
+///@param head We pass a pointer to the root node of the parse tree.
+void utils::printPreorder(node *head)
+{
+    if (head != nullptr)
+    {
+        cout << head->data;
+        printPreorder(head->left);
+        printPreorder(head->right);
+    }
+}
+
+/// @brief Function to print the post order expression by post order traversal of the parse tree.
+/// @param head The pointer to the root node of the parse tree is passed as the argument.
+void utils::printPostorder(node *head)
+{
+    if (head != nullptr)
+    {
+        printPostorder(head->left);
+        printPostorder(head->right);
+        cout << head->data;
+    }
+}
