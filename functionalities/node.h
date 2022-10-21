@@ -21,12 +21,12 @@ using namespace std;
 class node
 {
 public:
-    char data;        /*!< this is the name of the data in the node.Eg- 'p','q','+','*','~','>'*/
-    node *left;       /*!< this is a pointer to the node of the root of the left subtree of the current node*/
-    node *right;      /*!< this is a pointer to the node of the root of the right subtree of the current node*/
-    bool isFilled;    /*!< boolean for checking whether the current node has a value assigned to it's data variable or not*/
-    bool rightFilled; /*!< boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
-    bool leftFilled;  /*!< boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
+    char data;        /*!< This is the name of the data in the node. Eg- 'p','q','+','*','~','>'*/
+    node *left;       /*!< This is a pointer to the node of the root of the left subtree of the current node*/
+    node *right;      /*!< This is a pointer to the node of the root of the right subtree of the current node*/
+    bool isFilled;    /*!< Boolean for checking whether the current node has a value assigned to it's data variable or not*/
+    bool rightFilled; /*!< Boolean for checking whether the root of the right subtree has a value assigned to it's data variable or not*/
+    bool leftFilled;  /*!< Boolean for checking whether the root of the left subtree has a value assigned to it's data variable or not.*/
 
     node(); /*!< This is the constructor*/
     int fillLeft(node *Node);

@@ -14,7 +14,7 @@ struct result
 
 /// @brief A function to take in the infix expression of a logical formula as a string and make a parse tree.
 /// @param expression It takes the infix expression as a string as an argument.
-/// @return Returns a pointer to a result struct which has the pointer to the root node of the parse tree created.The integer count keeps a track of which character of the infix expression string is being traversed right now.
+/// @return Returns a pointer to a result struct which has the pointer to the root node of the parse tree created. The integer count keeps a track of which character of the infix expression string is being traversed right now.
 result *infixToParseTree(string expression)
 {
     node *head = new node;
@@ -127,9 +127,9 @@ void printPreorder(node *head)
         printPreorder(head->right);
     }
 }
-/// @brief Function to convert infix expression to prefix expression.It first runs the infixToPrefix function to get the the pointer to the root node of the parse tree created from the infix expression.Then the pointer to the root node is passed to the function print preorder to print the prefix expression.
+/// @brief Function to convert infix expression to prefix expression. It first runs the infixToPrefix function to get the the pointer to the root node of the parse tree created from the infix expression. Then the pointer to the root node is passed to the function print preorder to print the prefix expression.
 /// @param expression Takes the infix expression as a string as an argument.
-/// @return Returns a pointer to a result struct which contains the pointer to the root node of the parse tree created.
+/// @return Returns a pointer to a result structure which contains the pointer to the root node of the parse tree created.
 result *infixToPrefix(string expression)
 {
     result *tree = infixToParseTree(expression);
@@ -139,7 +139,7 @@ result *infixToPrefix(string expression)
 
 /// @brief Function to make a parse tree from given prefix expression.
 /// @param expression Prefix expression as a string is taken as the argument.
-/// @return Returns the pointer to a result struct which contains the pointer to the root node of the parse tree.The integer count is used to keep track of which character of the string for the expression is to be used.
+/// @return Returns the pointer to a result struct which contains the pointer to the root node of the parse tree. The integer count is used to keep track of which character of the string for the expression is to be used.
 result *prefixToParseTree(string expression)
 {
     int success = 0;
