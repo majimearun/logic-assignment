@@ -102,39 +102,48 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <p >compile all the task file along with all header <code>(*.h)</code> and cpp <code>(*cpp)</code> files in the functionalities folder:</p>
 <div class="fragment"><div class="line">g++ -o &lt;task&gt; &lt;task&gt;.cpp ./functionalities/utils.h ./functionalities/utils.cpp ./functionalities/node.cpp ./functionalities/node.cpp</div>
 </div><!-- fragment --><p >CSV file with analysis of code in -O1 and -O3 optimizations: <a href="https://github.com/majimearun/logic_assignment_1/blob/main/analysis/analysis.csv">analysis.csv</a></p>
+<ul>
+<li>Note: time of execution and cpu usage is measured using <code>/usr/bin/time</code></li>
+<li>Test cases were generated using <code><a class="el" href="make_test_cases_8py.html">makeTestCases.py</a></code></li>
+<li>Computer specifications on which tests were run:<ul>
+<li>Processor: Intel i5 core 10th gen</li>
+<li>OS: Pop!_OS 22.04</li>
+</ul>
+</li>
+</ul>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">task number   </th><th class="markdownTableHeadNone">optimization level   </th><th class="markdownTableHeadNone">size of expression (no. of atoms = operands + operators)   </th><th class="markdownTableHeadNone">execution time: wall clock time (s)   </th><th class="markdownTableHeadNone">cpu alloted (%)    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">92    </td></tr>
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">7500   </td><td class="markdownTableBodyNone">0.01   </td><td class="markdownTableBodyNone">92    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.53   </td><td class="markdownTableBodyNone">97    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.53   </td><td class="markdownTableBodyNone">97    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.49   </td><td class="markdownTableBodyNone">98    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.49   </td><td class="markdownTableBodyNone">98    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.03   </td><td class="markdownTableBodyNone">100    </td></tr>
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">7500   </td><td class="markdownTableBodyNone">0.03   </td><td class="markdownTableBodyNone">100    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.35   </td><td class="markdownTableBodyNone">93    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.35   </td><td class="markdownTableBodyNone">93    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.33   </td><td class="markdownTableBodyNone">87    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.33   </td><td class="markdownTableBodyNone">87    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.02   </td><td class="markdownTableBodyNone">96    </td></tr>
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">7500   </td><td class="markdownTableBodyNone">0.02   </td><td class="markdownTableBodyNone">96    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.48   </td><td class="markdownTableBodyNone">96    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.48   </td><td class="markdownTableBodyNone">96    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.46   </td><td class="markdownTableBodyNone">97    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.46   </td><td class="markdownTableBodyNone">97    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.11   </td><td class="markdownTableBodyNone">97    </td></tr>
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">7500   </td><td class="markdownTableBodyNone">0.11   </td><td class="markdownTableBodyNone">97    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.46   </td><td class="markdownTableBodyNone">98    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.46   </td><td class="markdownTableBodyNone">98    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.47   </td><td class="markdownTableBodyNone">85    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.47   </td><td class="markdownTableBodyNone">85    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.02   </td><td class="markdownTableBodyNone">10    </td></tr>
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">7500   </td><td class="markdownTableBodyNone">0.02   </td><td class="markdownTableBodyNone">10    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.78   </td><td class="markdownTableBodyNone">5    </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O1   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.78   </td><td class="markdownTableBodyNone">5    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.47   </td><td class="markdownTableBodyNone">6   </td></tr>
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">-O3   </td><td class="markdownTableBodyNone">75000   </td><td class="markdownTableBodyNone">0.47   </td><td class="markdownTableBodyNone">6   </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
