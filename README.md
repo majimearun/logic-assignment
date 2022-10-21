@@ -23,3 +23,21 @@ g++ -o <task> <task>.cpp ./functionalities/utils.h ./functionalities/utils.cpp .
 ```
 
 CSV file with analysis of code in -O1 and -O3 optimizations: [analysis.csv](https://github.com/majimearun/logic_assignment_1/blob/main/analysis/analysis.csv)
+
+| task number | optimization level | size of expression (no. of atoms = operands + operators) | execution time: wall clock time (s) | cpu alloted (%) |
+| ----------- | ------------------ | -------------------------------------------------------- | ----------------------------------- | --------------- |
+| 1           | -O1                | 10000                                                    | 0.01                                | 92              |
+|             | -O1                | 100000                                                   | 0.53                                | 97              |
+|             | -O3                | 100000                                                   | 0.49                                | 98              |
+| 2           | -O1                | 10000                                                    | 0.03                                | 100             |
+|             | -O1                | 100000                                                   | 0.35                                | 93              |
+|             | -O3                | 100000                                                   | 0.33                                | 87              |
+| 3           | -O1                | 10000                                                    | 0.02                                | 96              |
+|             | -O1                | 100000                                                   | 0.48                                | 96              |
+|             | -O3                | 100000                                                   | 0.46                                | 97              |
+| 4           | -O1                | 10000                                                    | 0.11                                | 97              |
+|             | -O1                | 100000                                                   | 0.46                                | 98              |
+|             | -O3                | 100000                                                   | 0.47                                | 85              |
+| 5           | -O1                | 10000                                                    | 0.02                                | 10              |
+|             | -O1                | 100000                                                   | 0.78                                | 5               |
+|             | -O3                | 100000                                                   | 0.47                                | 6               |
