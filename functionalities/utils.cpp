@@ -51,7 +51,7 @@ bool utils::isBracket(char c)
 }
 /// @brief Function to make the truth table corresponding to the number of variables in the logical expression.
 /// @param nvar The number of variables in the logical expression.The truth table will have nvar columns and 2^nvar rows.
-/// @return Returns the truth table as a pointer to an integer array.
+/// @return Returns the truth table as a pointer to a 2-D integer array.
 int **utils::truthTable(int nvar)
 {
     int rows = pow(2, nvar);
@@ -70,12 +70,12 @@ int **utils::truthTable(int nvar)
     make_truthtable(table, columns, rows, 0, pow(2, nvar - 1));
     return table;
 }
-/// @brief Function to populate the truth table with truth values.
+/// @brief Function to populate the truth table with truth values recursively column wise.
 /// @param arr The pointer to the truth table which is a 2-D array of integers.
 /// @param ncol The number of columns in the truth table.
 /// @param nrow The number of rows in the truth table.
 /// @param column The column which is being filled currently.
-/// @param step The number of rows after which the value being filled will be changed. Eg- Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on.
+/// @param step The number of rows after which the value being filled will be changed. Eg: Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on.
 void utils::make_truthtable(int **arr, int ncol, int nrow, int column, int step)
 {
     if (column == ncol)
@@ -126,7 +126,7 @@ bool *utils::assignTruthValues(string uniqueChars)
     }
     return truthValues;
 }
-/// @brief Function to assign truth values to a row of the truth table.
+/// @brief Function to assign truth values from a row of the truth table.
 /// @param uniqueChars A string containing all the variables in the logical expression is passed as an argument.
 /// @param row An array of integers representing a row of the truth table is passed as an argument.
 /// @return An array of truth values for all variables for one row of the truth table.

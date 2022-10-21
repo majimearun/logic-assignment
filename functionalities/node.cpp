@@ -24,7 +24,7 @@ node::node()
     leftFilled = false;
 }
 /// @brief Function to fill the root node of the left subtree of the current node.
-/// @param Node The pointer to the node which is going to be the root node of the left subtree.
+/// @param Node The pointer to the node which is going to be the root node of the left subtree is passed as an argument,
 /// @return Returns an integer value of 0 if everything gets executed succesfully and -1 in case of error in execution.
 ///@note Filling the node means assigning a value to the pointer left of the current node.It is not to be confused with assigning value to the variable data.
 int node::fillLeft(node *Node)
@@ -58,7 +58,7 @@ int node::fillRight(node *Node)
     }
 }
 /// @brief Function to fill the current node's data variable with the passed character.
-/// @param data The character to be assigned to the data variable.
+/// @param data The character to be assigned to the data variable is passed as an argument to the function.
 /// @return Returns 0 on successful execution.
 int node::fill(char data)
 {

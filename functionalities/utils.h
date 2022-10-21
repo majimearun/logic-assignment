@@ -16,7 +16,7 @@
 struct result
 {
     node *root; /*!<This is a pointer to the struct node.It will hold the pointer to the root node of the parse tree.*/
-    int count;  /*!</This integer keeps track of the number of characters passed in the expression string.*/
+    int count;  /*!<This integer keeps track of the number of characters passed in the expression string.*/
 
     ~result();
 };

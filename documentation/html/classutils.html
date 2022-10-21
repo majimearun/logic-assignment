@@ -110,7 +110,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:affcc137d1d7b88aaa3762063f1d1db89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the passed character is a bracket( '(' or ')' ) or not.  <a href="classutils.html#affcc137d1d7b88aaa3762063f1d1db89">More...</a><br /></td></tr>
 <tr class="separator:affcc137d1d7b88aaa3762063f1d1db89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a540f3d09749350919253ab670b6f8fd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a540f3d09749350919253ab670b6f8fd7">make_truthtable</a> (int **arr, int ncol, int nrow, int column, int step)</td></tr>
-<tr class="memdesc:a540f3d09749350919253ab670b6f8fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to populate the truth table with truth values.  <a href="classutils.html#a540f3d09749350919253ab670b6f8fd7">More...</a><br /></td></tr>
+<tr class="memdesc:a540f3d09749350919253ab670b6f8fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to populate the truth table with truth values recursively column wise.  <a href="classutils.html#a540f3d09749350919253ab670b6f8fd7">More...</a><br /></td></tr>
 <tr class="separator:a540f3d09749350919253ab670b6f8fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1032992a41ea7fb16c7b940e1a83f7c4"><td class="memItemLeft" align="right" valign="top">static int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a1032992a41ea7fb16c7b940e1a83f7c4">truthTable</a> (int nvar)</td></tr>
 <tr class="memdesc:a1032992a41ea7fb16c7b940e1a83f7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make the truth table corresponding to the number of variables in the logical expression.  <a href="classutils.html#a1032992a41ea7fb16c7b940e1a83f7c4">More...</a><br /></td></tr>
@@ -122,7 +122,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9eaf7ae64428e9bd2cde03b1ad221802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get truth value of each variable from the user and assign them to correspoding variable in the logical expression.The truth values are stored in an array of booleans.  <a href="classutils.html#a9eaf7ae64428e9bd2cde03b1ad221802">More...</a><br /></td></tr>
 <tr class="separator:a9eaf7ae64428e9bd2cde03b1ad221802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52b8a7670726d790af3b2eff13bd155c"><td class="memItemLeft" align="right" valign="top">static bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a52b8a7670726d790af3b2eff13bd155c">assignTruthValues</a> (string uniqueChars, int *row)</td></tr>
-<tr class="memdesc:a52b8a7670726d790af3b2eff13bd155c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to assign truth values to a row of the truth table.  <a href="classutils.html#a52b8a7670726d790af3b2eff13bd155c">More...</a><br /></td></tr>
+<tr class="memdesc:a52b8a7670726d790af3b2eff13bd155c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to assign truth values from a row of the truth table.  <a href="classutils.html#a52b8a7670726d790af3b2eff13bd155c">More...</a><br /></td></tr>
 <tr class="separator:a52b8a7670726d790af3b2eff13bd155c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16140cfd54dfa67d8695c9b9fbd8c207"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structresult.html">result</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">infixToParseTree</a> (string expression)</td></tr>
 <tr class="memdesc:a16140cfd54dfa67d8695c9b9fbd8c207"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to take in the infix expression of a logical formula as a string and make a parse tree.  <a href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">More...</a><br /></td></tr>
@@ -216,7 +216,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Function to assign truth values to a row of the truth table. </p>
+<p>Function to assign truth values from a row of the truth table. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uniqueChars</td><td>A string containing all the variables in the logical expression is passed as an argument. </td></tr>
@@ -393,14 +393,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Function to populate the truth table with truth values. </p>
+<p>Function to populate the truth table with truth values recursively column wise. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arr</td><td>The pointer to the truth table which is a 2-D array of integers. </td></tr>
     <tr><td class="paramname">ncol</td><td>The number of columns in the truth table. </td></tr>
     <tr><td class="paramname">nrow</td><td>The number of rows in the truth table. </td></tr>
     <tr><td class="paramname">column</td><td>The column which is being filled currently. </td></tr>
-    <tr><td class="paramname">step</td><td>The number of rows after which the value being filled will be changed. Eg- Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on. </td></tr>
+    <tr><td class="paramname">step</td><td>The number of rows after which the value being filled will be changed. Eg: Step value of 1 means the value will be changed every other row, i.e. 0 1 0 1.... Similarly step of 2 will mean value will change every 2 rows, i.e. 0 0 1 1 0 0 1 1...and so on. </td></tr>
   </table>
   </dd>
 </dl>
@@ -585,7 +585,7 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns the truth table as a pointer to an integer array. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the truth table as a pointer to a 2-D integer array. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="utils_8cpp_source.html#l00055">55</a> of file <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
 
