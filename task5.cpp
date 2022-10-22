@@ -81,9 +81,12 @@ void showTruthTable(string expression)
 
 int main()
 {
-    string expression = "~((r+(s+a))*((~p)*q))";
+    string expression;
+    // string expression = "~((r+(s+a))*((~p)*q))";
     char choice;
     cout << "Task 5: evaulating the truth value of the expression" << endl;
+    cout << "Enter infix (well bracketed) expression: ";
+    cin >> expression;
     cout << "Do you want to evaluate the expression for: " << endl;
     cout << "1. a given set of truth values (input)" << endl;
     cout << "2. the entire truth table" << endl;
@@ -96,12 +99,14 @@ int main()
         cout << "The truth value of the expression is: " << truth << endl;
         cout << "--------------------------------------------" << endl;
     }
-    else if(choice == '2'){
+    else if (choice == '2')
+    {
         cout << "Evaluating whole truth table for expression:" << endl;
         showTruthTable(expression);
         cout << "--------------------------------------------" << endl;
     }
-    else{
+    else
+    {
         cout << "Invalid choice" << endl;
     }
 

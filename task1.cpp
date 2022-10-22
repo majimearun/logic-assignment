@@ -122,8 +122,11 @@ result *infixToPrefix(string expression)
 
 int main()
 {
-    string expression = "~((r+(s+a))*((~p)*q))";
+    // string expression = "~((r+(s+a))*((~p)*q))";
+    string expression;
     cout << "Task 1: Infix expression (fully bracketed) to prefix notation" << endl;
+    cout << "Enter infix (well bracketed) expression: ";
+    cin >> expression;
     cout << "Expression is: " << expression << endl;
     cout << "correspoding prefix expression: " << endl;
     result *tree = infixToPrefix(expression);

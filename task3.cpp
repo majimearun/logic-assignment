@@ -20,8 +20,11 @@ void printInorder(node *head)
 
 int main()
 {
-    string expression = "~((r+(s+a))*((~p)*q))";
+    // string expression = "~((r+(s+a))*((~p)*q))";
+    string expression;
     cout << "Task 3: Outputting the parse tree in infix notation using inorder traversal" << endl;
+    cout << "Enter infix (well bracketed) expression: ";
+    cin >> expression;
     cout << "Expression is: " << expression << endl;
     result *tree = utils::infixToParseTree(expression);
     printInorder(tree->root);

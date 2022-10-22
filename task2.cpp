@@ -124,9 +124,12 @@ result *prefixToParseTree(string expression)
 
 int main()
 {
-    string expression = "~*+r+sa*~pq";
+    // string expression = "~*+r+sa*~pq";
+    string expression;
     cout << "Task 2: converting prefix notation to parse tree" << endl;
     cout << "Expression is: " << expression << endl;
+    cout << "Enter prefix expression: ";
+    cin >> expression;
     result *tree = prefixToParseTree(expression);
     cout << "Verification... traversing the tree in multiple ways: " << endl;
     cout << "Inorder: ";

@@ -26,8 +26,11 @@ int heightOfParseTree(node *head)
 
 int main()
 {
-    string expression = "~((r+(s+a))*((~p)*q))";
+    // string expression = "~((r+(s+a))*((~p)*q))";
+    string expression;
     cout << "Task 4: computing the height of the parse tree" << endl;
+    cout << "Enter infix (well bracketed) expression: ";
+    cin >> expression;
     cout << "Expression is: " << expression << endl;
     result *tree = utils::infixToParseTree(expression);
     cout << "Height of the parse tree: " << heightOfParseTree(tree->root) << endl;
