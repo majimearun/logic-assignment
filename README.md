@@ -19,7 +19,7 @@ Follow format in `tasks.json` file.
 compile all the task file along with all header `(*.h)` and cpp `(*cpp)` files in the functionalities folder:
 
 ```bash
-g++ -o <task> <task>.cpp ./functionalities/utils.h ./functionalities/utils.cpp ./functionalities/node.cpp ./functionalities/node.cpp
+g++  <task>.cpp ./functionalities/*.h ./functionalities/*.cpp -o <task>
 ```
 
 CSV file with analysis of code in -O1 and -O3 optimizations: [analysis.csv](https://github.com/majimearun/logic_assignment_1/blob/main/analysis/analysis.csv)
