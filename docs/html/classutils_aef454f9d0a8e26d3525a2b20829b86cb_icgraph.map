@@ -1,0 +1,6 @@
+<map id="utils::uniqueAtoms" name="utils::uniqueAtoms">
+<area shape="rect" id="node1" title="Function to identify the unique variables in the given propositional logic formula." alt="" coords="307,31,451,57"/>
+<area shape="rect" id="node2" href="$task5_8cpp.html#a0df664426c86ffdb838bc611e63b45c0" title="Function to evaluate the truth value of the expression given in infix notation as a string and return..." alt="" coords="108,5,259,32"/>
+<area shape="rect" id="node4" href="$task5_8cpp.html#a52d594fcafe34f47655beedad34d1e38" title="Function to print the truth table of a given logical expression." alt="" coords="122,56,245,83"/>
+<area shape="rect" id="node3" href="$task5_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
+</map>

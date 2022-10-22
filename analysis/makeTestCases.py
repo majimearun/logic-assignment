@@ -2,11 +2,11 @@ import string
 import random
 import os
 
-# using only operators which need 2 operands for wase of making large sized test cases
+# using only operators which need 2 operands for ease of making large sized test cases
 operators = ["+", "*", ">"]
 
 # 3*size long expressions will be created
-# size is number of small (3 nodes) tress 
+# size is number of small (3 nodes) tress
 size = 25000
 
 dir = os.path.dirname(os.path.realpath(__file__))
