@@ -203,16 +203,19 @@ $(document).ready(function(){initNavTree('task1_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="task1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">  123</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="task1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">string</span> expression = <span class="stringliteral">&quot;~((r+(s+a))*((~p)*q))&quot;</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Task 1: Infix expression (fully bracketed) to prefix notation&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Expression is: &quot;</span> &lt;&lt; expression &lt;&lt; endl;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;correspoding prefix expression: &quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="structresult.html">result</a> *tree = <a class="code" href="task1_8cpp.html#a0e980c3ed35f341eca21ed6974c89eb6">infixToPrefix</a>(expression);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">delete</span> tree;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// string expression = &quot;~((r+(s+a))*((~p)*q))&quot;;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">string</span> expression;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Task 1: Infix expression (fully bracketed) to prefix notation&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Enter infix (well bracketed) expression: &quot;</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    cin &gt;&gt; expression;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Expression is: &quot;</span> &lt;&lt; expression &lt;&lt; endl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;correspoding prefix expression: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="structresult.html">result</a> *tree = <a class="code" href="task1_8cpp.html#a0e980c3ed35f341eca21ed6974c89eb6">infixToPrefix</a>(expression);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">delete</span> tree;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------------&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 <div class="ttc" id="aclassnode_html"><div class="ttname"><a href="classnode.html">node</a></div><div class="ttdoc">This is the class for a node of the parse tree. Each node of the parse tree will contain the name of ...</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00021">node.h:22</a></div></div>
 <div class="ttc" id="aclassnode_html_a0fffcad240f55c30da68f2c82ff1f8d5"><div class="ttname"><a href="classnode.html#a0fffcad240f55c30da68f2c82ff1f8d5">node::fillRight</a></div><div class="ttdeci">int fillRight(node *Node)</div><div class="ttdoc">Function to fill the root node of the right subtree of the current node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8cpp_source.html#l00047">node.cpp:47</a></div></div>
 <div class="ttc" id="aclassnode_html_a6f9100a3fe81d82776ce47ecdba94691"><div class="ttname"><a href="classnode.html#a6f9100a3fe81d82776ce47ecdba94691">node::data</a></div><div class="ttdeci">char data</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00024">node.h:24</a></div></div>

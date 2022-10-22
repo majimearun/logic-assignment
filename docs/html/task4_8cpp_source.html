@@ -110,15 +110,18 @@ $(document).ready(function(){initNavTree('task4_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="task4_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="task4_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">string</span> expression = <span class="stringliteral">&quot;~((r+(s+a))*((~p)*q))&quot;</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Task 4: computing the height of the parse tree&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Expression is: &quot;</span> &lt;&lt; expression &lt;&lt; endl;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="structresult.html">result</a> *tree = <a class="code" href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">utils::infixToParseTree</a>(expression);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Height of the parse tree: &quot;</span> &lt;&lt; <a class="code" href="task4_8cpp.html#ab665615702886d81caf0137afaff4ccc">heightOfParseTree</a>(tree-&gt;<a class="code" href="structresult.html#a4ff873c3f3dbf6ba8d73db48c9656bf1">root</a>) &lt;&lt; endl;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------------&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">delete</span> tree;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// string expression = &quot;~((r+(s+a))*((~p)*q))&quot;;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">string</span> expression;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Task 4: computing the height of the parse tree&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Enter infix (well bracketed) expression: &quot;</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    cin &gt;&gt; expression;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Expression is: &quot;</span> &lt;&lt; expression &lt;&lt; endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="structresult.html">result</a> *tree = <a class="code" href="classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207">utils::infixToParseTree</a>(expression);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Height of the parse tree: &quot;</span> &lt;&lt; <a class="code" href="task4_8cpp.html#ab665615702886d81caf0137afaff4ccc">heightOfParseTree</a>(tree-&gt;<a class="code" href="structresult.html#a4ff873c3f3dbf6ba8d73db48c9656bf1">root</a>) &lt;&lt; endl;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;--------------------------------------------&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">delete</span> tree;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="aclassnode_html"><div class="ttname"><a href="classnode.html">node</a></div><div class="ttdoc">This is the class for a node of the parse tree. Each node of the parse tree will contain the name of ...</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00021">node.h:22</a></div></div>
 <div class="ttc" id="aclassnode_html_a6f9100a3fe81d82776ce47ecdba94691"><div class="ttname"><a href="classnode.html#a6f9100a3fe81d82776ce47ecdba94691">node::data</a></div><div class="ttdeci">char data</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00024">node.h:24</a></div></div>
 <div class="ttc" id="aclassnode_html_a7cbff55ff448f557223f79299056e9b1"><div class="ttname"><a href="classnode.html#a7cbff55ff448f557223f79299056e9b1">node::left</a></div><div class="ttdeci">node * left</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00025">node.h:25</a></div></div>
