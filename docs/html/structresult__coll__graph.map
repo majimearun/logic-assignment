@@ -1,0 +1,4 @@
+<map id="result" name="result">
+<area shape="rect" id="node1" title="A structure named result. It contains a pointer to struct node and an integer." alt="" coords="5,97,64,124"/>
+<area shape="rect" id="node2" href="$classnode.html" title="This is the class for a node of the parse tree. Each node of the parse tree will contain the name of ..." alt="" coords="7,7,62,33"/>
+</map>

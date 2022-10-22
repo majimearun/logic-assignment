@@ -1,6 +1,14 @@
-# CS F214: Logic Assignment 1
+# CS F214: Logic Assignment
 
-Submission for CS F214: Logic assignment 1: Parse Trees
+Submission for CS F214: Logic assignment 1
+
+Done by:
+
+1. Arunachala Amuda Murugan (2021A7PS0205H)
+
+2. Ayush Bhauwala (2021A7PS0180H)
+
+3. Suryansh Chandola (2021A7PS0058H)
 
 Main test expression: `~((r+(s+a))*((~p)*q))`
 
@@ -16,18 +24,19 @@ Follow format in `tasks.json` file.
 
 (or)
 
-compile all the task file along with all header `(*.h)` and cpp `(*cpp)` files in the functionalities folder:
+Compile the task file along with all header `(*.h)` and cpp `(*cpp)` files in the functionalities folder. Example:
 
 ```bash
-g++  <task>.cpp ./functionalities/*.h ./functionalities/*.cpp -o <task>
+g++  task1.cpp ./functionalities/*.h ./functionalities/*.cpp -o task1
 ```
 
 CSV file with analysis of code in -O1 and -O3 optimizations: [analysis.csv](https://github.com/majimearun/logic_assignment_1/blob/main/analysis/analysis.csv)
 
--   Note: time of execution and cpu usage is measured using `/usr/bin/time`
+-   **Note:** time of execution and cpu usage is measured using `/usr/bin/time`
 -   Test cases were generated using `makeTestCases.py`
 -   Computer specifications on which tests were run:
     -   Processor: Intel i5 core 10th gen
+    -   8gb RAM
     -   OS: Pop!\_OS 22.04
 
 | task number | optimization level | size of expression (no. of atoms = operands + operators) | execution time: wall clock time (s) | cpu alloted (%) |
