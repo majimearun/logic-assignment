@@ -51,18 +51,29 @@ result *prefixToParseTree(string expression)
             {
                 if (head->isFilled)
                 {
-                    if (head->leftFilled)
+                    if (head->data != '~')
                     {
-                        result *temp = prefixToParseTree(expression.substr(i));
-                        success = head->fillRight(temp->root);
-                        i += temp->count - 1;
-                        end = true;
+                        if (head->leftFilled)
+                        {
+                            result *temp = prefixToParseTree(expression.substr(i));
+                            success = head->fillRight(temp->root);
+                            i += temp->count - 1;
+                            end = true;
+                        }
+                        else
+                        {
+                            result *temp = prefixToParseTree(expression.substr(i));
+                            success = head->fillLeft(temp->root);
+                            i += temp->count - 1;
+                        }
                     }
                     else
                     {
                         result *temp = prefixToParseTree(expression.substr(i));
-                        success = head->fillLeft(temp->root);
+                        success = head->fillRight(temp->root);
+                        head->leftFilled = true;
                         i += temp->count - 1;
+                        end = true;
                     }
                 }
                 else
