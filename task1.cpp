@@ -130,7 +130,6 @@ int main()
     cout << "Expression is: " << expression << endl;
     cout << "correspoding prefix expression: " << endl;
     result *tree = infixToPrefix(expression);
-    delete tree;
     cout << endl;
     cout << "--------------------------------------------" << endl;
     return 0;

@@ -141,7 +141,6 @@ int main()
     cout << "Postorder: ";
     utils::printPostorder(tree->root);
     cout << endl;
-    delete tree;
     cout << "--------------------------------------------" << endl;
     return 0;
 }

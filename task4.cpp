@@ -35,6 +35,5 @@ int main()
     result *tree = utils::infixToParseTree(expression);
     cout << "Height of the parse tree: " << heightOfParseTree(tree->root) << endl;
     cout << "--------------------------------------------" << endl;
-    delete tree;
     return 0;
 }

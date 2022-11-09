@@ -73,10 +73,7 @@ void showTruthTable(string expression)
             cout << uniqueChars[j] << " = " << truthValues[j] << ", ";
         }
         cout << "Result = " << result << endl;
-        delete parseTree;
-        delete truthValues;
     }
-    delete table;
 }
 
 int main()

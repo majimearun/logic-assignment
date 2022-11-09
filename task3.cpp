@@ -28,7 +28,6 @@ int main()
     cout << "Expression is: " << expression << endl;
     result *tree = utils::infixToParseTree(expression);
     printInorder(tree->root);
-    delete tree;
     cout << endl;
     cout << "--------------------------------------------" << endl;
     return 0;
