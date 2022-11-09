@@ -47,81 +47,40 @@ result *prefixToParseTree(string expression)
         }
         else
         {
-            if (var != '~')
+            if (head->isFilled)
             {
-                if (head->isFilled)
+                if (head->data != '~')
                 {
-                    if (head->data != '~')
+                    if (head->leftFilled)
                     {
-                        if (head->leftFilled)
-                        {
-                            result *temp = prefixToParseTree(expression.substr(i));
-                            success = head->fillRight(temp->root);
-                            i += temp->count - 1;
-                            end = true;
-                        }
-                        else
-                        {
-                            result *temp = prefixToParseTree(expression.substr(i));
-                            success = head->fillLeft(temp->root);
-                            i += temp->count - 1;
-                        }
+                        result *temp = prefixToParseTree(expression.substr(i));
+                        success = head->fillRight(temp->root);
+                        i += temp->count - 1;
+                        end = true;
                     }
                     else
                     {
                         result *temp = prefixToParseTree(expression.substr(i));
-                        success = head->fillRight(temp->root);
-                        head->leftFilled = true;
+                        success = head->fillLeft(temp->root);
                         i += temp->count - 1;
-                        end = true;
                     }
                 }
                 else
                 {
-                    success = head->fill(var);
+                    result *temp = prefixToParseTree(expression.substr(i));
+                    success = head->fillRight(temp->root);
+                    head->leftFilled = true;
+                    i += temp->count - 1;
+                    end = true;
                 }
             }
             else
             {
-                if (head->isFilled)
-                {
-                    if (head->data != '~')
-                    {
-                        if (head->leftFilled)
-                        {
-                            result *temp = prefixToParseTree(expression.substr(i));
-                            success = head->fillRight(temp->root);
-                            i += temp->count - 1;
-                            end = true;
-                        }
-                        else
-                        {
-                            result *temp = prefixToParseTree(expression.substr(i));
-                            success = head->fillLeft(temp->root);
-                            i += temp->count - 1;
-                        }
-                    }
-                    else
-                    {
-                        result *temp = prefixToParseTree(expression.substr(i));
-                        success = head->fillRight(temp->root);
-                        head->leftFilled = true;
-                        i += temp->count - 1;
-                        end = true;
-                    }
-                }
-                else
-                {
-                    if (var != '~')
-                    {
-                        success = head->fill(var);
-                    }
-                    else
-                    {
-                        success = head->fill(var);
-                        head->leftFilled = true;
-                    }
-                }
+                success = head->fill(var);
+            }
+            if (var == '~')
+            {
+                head->leftFilled = true;
             }
         }
         if (i >= expression.length())
