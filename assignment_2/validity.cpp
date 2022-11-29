@@ -4,24 +4,31 @@
 
 using namespace std;
 
-struct split_result
+struct res
 {
-    bool valid;
-    vector<string> parts;
+    char root;
+    int index;
 };
 
-split_result *split(string s, char delimiter)
+res *find_root(string s)
 {
+    int add = 0;
     if (s.length() > 1)
     {
-        s = s.substr(1, s.size() - 2);
+        if (s[0] != '(' && s[0] != '~')
+        {
+            return new res{'\0', -1};
+        }
+        else if (s[0] == '(')
+        {
+            s = s.substr(1, s.length() - 2);
+            add++;
+        }
     }
-
-    size_t i = 0;
-    if (s[i] != '~')
+    if (s[0] != '~')
     {
         int counter = 0;
-        do
+        for (int i = 0; i < s.length(); i++)
         {
             if (s[i] == '(')
             {
@@ -31,18 +38,70 @@ split_result *split(string s, char delimiter)
             {
                 counter += 1;
             }
-            i += 1;
-        } while (counter < 0);
-        char root = s[i];
+            if (counter == 0)
+            {
+                return new res{s[i + 1], i + 1 + add};
+            }
+        }
     }
+    else
+    {
+        s = s.substr(1);
+        if (s[0] == '(')
+        {
+            int counter = 0;
+            int i;
+            for (i = 0; i < s.size(); i++)
+            {
+                if (s[i] == '(')
+                {
+                    counter -= 1;
+                }
+                else if (s[i] == ')')
+                {
+                    counter += 1;
+                }
+                if (counter == 0)
+                {
+                    break;
+                }
+            }
+            if (i == s.length() - 1)
+            {
+                return new res{'~', 0};
+            }
+            res *ans = find_root("(" + s + ")");
+            ans->index += 1;
+            return ans;
+        }
+        else
+        {
+            if (s.length() == 1)
+            {
+                return new res{'~', 0};
+            }
+            return new res{s[1], 2 + add};
+        }
+    }
+}
 
-    if (root != delimiter)
+struct split_result
+{
+    bool valid;
+    vector<string> parts;
+};
+
+split_result *split(string s, char delimiter)
+{
+    res *result = find_root(s);
+    if (result->root != delimiter)
     {
         return new split_result{false, {}};
     }
-    string left = s.substr(0, i);
-    string right = s.substr(i + 1, s.size() - i - 1);
-    return new split_result{true, {left, right}};
+    string left = s.substr(1, result->index - 1);
+    string right = s.substr(result->index + 1);
+    right = right.substr(0, right.length() - 1);
+    return new split_result{true, vector<string>{left, right}};
 }
 
 bool and_intro_checker(string l1, string l2, string r)
@@ -88,15 +147,14 @@ bool implies_elim_checker(string l1, string l2, string r)
 
 string make_negation(string s)
 {
-    if (s.length() == 1)
+    if (s[0] == '~')
     {
-        s = "~" + s;
+        return "~" + ("(" + s + ")");
     }
     else
     {
-        s = "~(" + s + ")";
+        return "~" + s;
     }
-    return s;
 }
 
 bool mt_checker(string l1, string l2, string r)
@@ -167,10 +225,6 @@ int main()
         else if (parts[1] == "MT")
         {
             valid = mt_checker(values[stoi(parts[2]) - 1], values[stoi(parts[3]) - 1], values[i]);
-        }
-        else
-        {
-            valid = false;
         }
     }
     if (valid)
