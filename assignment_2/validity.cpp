@@ -12,6 +12,10 @@ struct split_result
 
 split_result *split(string s, char delimiter)
 {
+    if (s.length() > 1)
+    {
+        s = s.substr(1, s.size() - 2);
+    }
     size_t i = 0;
     int counter = 0;
     do
@@ -43,7 +47,6 @@ bool and_intro_checker(string l1, string l2, string r)
 
 bool and_elim_checker(string l, string r, int n = 1)
 {
-    l = l.substr(1, l.size() - 2);
     split_result *sr = split(l, '*');
     if (!sr->valid)
     {
@@ -55,7 +58,6 @@ bool and_elim_checker(string l, string r, int n = 1)
 
 bool or_intro_checker(string l, string r, int n = 1)
 {
-    r = r.substr(1, r.size() - 2);
     split_result *sr = split(r, '+');
     if (!sr->valid)
     {
@@ -67,7 +69,6 @@ bool or_intro_checker(string l, string r, int n = 1)
 
 bool implies_elim_checker(string l1, string l2, string r)
 {
-    l1 = l1.substr(1, l1.size() - 2);
     split_result *sr = split(l1, '>');
     if (!sr->valid)
     {
@@ -95,7 +96,6 @@ string make_negation(string s)
 
 bool mt_checker(string l1, string l2, string r)
 {
-    l1 = l1.substr(1, l1.size() - 2);
     split_result *sr = split(l1, '>');
     if (!sr->valid)
     {
@@ -131,35 +131,42 @@ int main()
         }
         parts.push_back(line);
         values.push_back(parts[0]);
-        if(parts[1] == "P"){
+        if (parts[1] == "P")
+        {
             continue;
         }
-        else if(parts[1] == "*i"){
+        else if (parts[1] == "*i")
+        {
             valid = and_intro_checker(values[stoi(parts[2]) - 1], values[stoi(parts[3]) - 1], values[i]);
         }
-        else if(parts[1] == "*e1"){
+        else if (parts[1] == "*e1")
+        {
             valid = and_elim_checker(values[stoi(parts[2]) - 1], values[i], 1);
         }
-        else if(parts[1] == "*e2"){
+        else if (parts[1] == "*e2")
+        {
             valid = and_elim_checker(values[stoi(parts[2]) - 1], values[i], 2);
         }
-        else if(parts[1] == "+i1"){
+        else if (parts[1] == "+i1")
+        {
             valid = or_intro_checker(values[stoi(parts[2]) - 1], values[i], 1);
         }
-        else if(parts[1] == "+i2"){
+        else if (parts[1] == "+i2")
+        {
             valid = or_intro_checker(values[stoi(parts[2]) - 1], values[i], 2);
         }
-        else if(parts[1] == ">e"){
+        else if (parts[1] == ">e")
+        {
             valid = implies_elim_checker(values[stoi(parts[2]) - 1], values[stoi(parts[3]) - 1], values[i]);
         }
-        else if(parts[1] == "MT"){
+        else if (parts[1] == "MT")
+        {
             valid = mt_checker(values[stoi(parts[2]) - 1], values[stoi(parts[3]) - 1], values[i]);
         }
-        else{
+        else
+        {
             valid = false;
         }
-
-
     }
     if (valid)
     {
