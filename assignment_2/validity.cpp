@@ -155,6 +155,9 @@ int main()
         else if(parts[1] == "MT"){
             valid = mt_checker(values[stoi(parts[2]) - 1], values[stoi(parts[3]) - 1], values[i]);
         }
+        else{
+            valid = false;
+        }
 
 
     }
