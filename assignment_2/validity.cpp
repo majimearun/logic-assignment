@@ -16,21 +16,26 @@ split_result *split(string s, char delimiter)
     {
         s = s.substr(1, s.size() - 2);
     }
+
     size_t i = 0;
-    int counter = 0;
-    do
+    if (s[i] != '~')
     {
-        if (s[i] == '(')
+        int counter = 0;
+        do
         {
-            counter -= 1;
-        }
-        else if (s[i] == ')')
-        {
-            counter += 1;
-        }
-        i += 1;
-    } while (counter < 0);
-    char root = s[i];
+            if (s[i] == '(')
+            {
+                counter -= 1;
+            }
+            else if (s[i] == ')')
+            {
+                counter += 1;
+            }
+            i += 1;
+        } while (counter < 0);
+        char root = s[i];
+    }
+
     if (root != delimiter)
     {
         return new split_result{false, {}};
