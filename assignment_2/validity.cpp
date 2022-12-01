@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -181,6 +182,7 @@ int main()
     bool valid = true;
     for (int i = 0; (i < n) && valid; i++)
     {
+
         string line;
         cin >> line;
         vector<string> parts;

@@ -33,3 +33,12 @@
 
 # Compiler settings
 **/.vscode/
+
+# non essential files
+**/check.cpp
+**/check
+**/check.exe
+**/check.out
+**/validity
+**/validity.exe
+**/validity.out
