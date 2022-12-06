@@ -1,0 +1,3 @@
+<map id="node" name="node">
+<area shape="rect" id="node1" title="This is the class for a node of the parse tree. Each node of the parse tree will contain the name of ..." alt="" coords="5,7,60,33"/>
+</map>

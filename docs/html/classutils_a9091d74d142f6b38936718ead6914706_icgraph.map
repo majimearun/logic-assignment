@@ -1,0 +1,17 @@
+<map id="utils::isOperator" name="utils::isOperator">
+<area shape="rect" id="node1" title="Function to check whether the passed character is a member of the operators array or not." alt="" coords="705,132,832,159"/>
+<area shape="rect" id="node2" href="$task5_8cpp.html#afa88b0250f8a51877e9dc1fe6f5119ea" title="Function to print the truth value obtained by evaluating the passed logical expression with the help ..." alt="" coords="321,56,455,83"/>
+<area shape="rect" id="node6" href="$task4_8cpp.html#ab665615702886d81caf0137afaff4ccc" title="Function to get the height of the parse tree by counting the height of all the branches and comparing..." alt="" coords="517,208,657,235"/>
+<area shape="rect" id="node8" href="$classutils.html#a16140cfd54dfa67d8695c9b9fbd8c207" title="A function to take in the infix expression of a logical formula as a string and make a parse tree." alt="" coords="307,107,469,133"/>
+<area shape="rect" id="node10" href="$task1_8cpp.html#a46826317eba72b462e7673c9356f8101" title="A function to take in the infix expression of a logical formula as a string and make a parse tree." alt="" coords="524,157,651,184"/>
+<area shape="rect" id="node13" href="$task2_8cpp.html#ac69fc45de26b93973f706b96f0e37dec" title="Function to make a parse tree from given prefix expression." alt="" coords="520,259,655,285"/>
+<area shape="rect" id="node15" href="$classutils.html#aef454f9d0a8e26d3525a2b20829b86cb" title="Function to identify the unique variables in the given propositional logic formula." alt="" coords="316,5,460,32"/>
+<area shape="rect" id="node3" href="$task5_8cpp.html#a0df664426c86ffdb838bc611e63b45c0" title="Function to evaluate the truth value of the expression given in infix notation as a string and return..." alt="" coords="108,5,259,32"/>
+<area shape="rect" id="node5" href="$task5_8cpp.html#a52d594fcafe34f47655beedad34d1e38" title="Function to print the truth table of a given logical expression." alt="" coords="122,56,245,83"/>
+<area shape="rect" id="node4" href="$task5_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node7" href="$task4_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="361,208,415,235"/>
+<area shape="rect" id="node9" href="$task3_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="156,107,211,133"/>
+<area shape="rect" id="node11" href="$task1_8cpp.html#a0e980c3ed35f341eca21ed6974c89eb6" title="Function to convert infix expression to prefix expression. It first runs the infixToPrefix function t..." alt="" coords="337,157,439,184"/>
+<area shape="rect" id="node12" href="$task1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="156,157,211,184"/>
+<area shape="rect" id="node14" href="$task2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="361,259,415,285"/>
+</map>
