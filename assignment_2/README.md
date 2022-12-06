@@ -31,7 +31,7 @@ For example, consider the following proof:
 3. ~p MT 1,2
 4. ~q>~p >i 2-3
 
-The values vector will look like <(p>q, 0), (~q, 1), (~p, 1), (~q>~p, 0)>
+The values vector will look like {(p>q, 0), (~q, 1), (~p, 1), (~q>~p, 0)}
 
 Each line can access propositional logic formula from lines whose scope integer is less than or equal to it's own scope integer.
 
