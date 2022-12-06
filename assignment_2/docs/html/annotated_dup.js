@@ -1,6 +1,5 @@
 var annotated_dup =
 [
-    [ "node", "classnode.html", "classnode" ],
-    [ "result", "structresult.html", "structresult" ],
-    [ "utils", "classutils.html", null ]
+    [ "res", "structres.html", "structres" ],
+    [ "split_result", "structsplit__result.html", "structsplit__result" ]
 ];

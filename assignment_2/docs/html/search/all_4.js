@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['fill_6',['fill',['../classnode.html#abf6cfde2a45f8fe549715ef7777b8395',1,'node']]],
-  ['fillleft_7',['fillLeft',['../classnode.html#a9845c42e8f1895b4227696d3efbab774',1,'node']]],
-  ['fillright_8',['fillRight',['../classnode.html#a0fffcad240f55c30da68f2c82ff1f8d5',1,'node']]]
+  ['or_5fintro_5fchecker_0',['or_intro_checker',['../validity_8cpp.html#a21a712c92fec631807207c1c14a04203',1,'validity.cpp']]]
 ];

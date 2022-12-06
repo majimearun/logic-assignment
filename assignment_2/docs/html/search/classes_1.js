@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['result_47',['result',['../structresult.html',1,'']]]
+  ['split_5fresult_0',['split_result',['../structsplit__result.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_84',['data',['../classnode.html#a6f9100a3fe81d82776ce47ecdba94691',1,'node']]]
+  ['parts_0',['parts',['../structsplit__result.html#a7c43c75746b1e9753eafd8e4fe8e6a78',1,'split_result']]]
 ];

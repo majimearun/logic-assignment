@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['count_83',['count',['../structresult.html#ada344672bba484939c29fec1786bf51d',1,'result']]]
+  ['index_0',['index',['../structres.html#afc1e28d3eefc1d97e092a81239e83669',1,'res']]]
 ];

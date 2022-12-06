@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['left_86',['left',['../classnode.html#a7cbff55ff448f557223f79299056e9b1',1,'node']]],
-  ['leftfilled_87',['leftFilled',['../classnode.html#a95f348e5a55b46d862de1f82246a8ccc',1,'node']]]
+  ['valid_0',['valid',['../structsplit__result.html#a7cc2a42410df9e7b38e736342f818870',1,'split_result']]]
 ];

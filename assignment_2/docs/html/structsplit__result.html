@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Logic Assignment 2: File Members</title>
+<title>Logic Assignment 2: split_result Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('globals.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structsplit__result.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,23 +95,63 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 </div>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structsplit__result-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">split_result Struct Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all file members with links to the files they belong to:</div><ul>
-<li>and_elim_checker()&#160;:&#160;<a class="el" href="validity_8cpp.html#a405a66752cce8015790914e547f536a3">validity.cpp</a></li>
-<li>and_intro_checker()&#160;:&#160;<a class="el" href="validity_8cpp.html#a60646f51bfd90738e3dbee68861e095d">validity.cpp</a></li>
-<li>find_root()&#160;:&#160;<a class="el" href="validity_8cpp.html#a39ba3cc3645e7e7a377bbde29cbb85f7">validity.cpp</a></li>
-<li>implies_elim_checker()&#160;:&#160;<a class="el" href="validity_8cpp.html#ae2fc6dbf6e60b752ff38c4b59ba29a49">validity.cpp</a></li>
-<li>main()&#160;:&#160;<a class="el" href="validity_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">validity.cpp</a></li>
-<li>make_negation()&#160;:&#160;<a class="el" href="validity_8cpp.html#a90e620998abd5bf70fd916af02c0e418">validity.cpp</a></li>
-<li>mt_checker()&#160;:&#160;<a class="el" href="validity_8cpp.html#a0c2eca33760e98ac1facc25b700a45f4">validity.cpp</a></li>
-<li>or_intro_checker()&#160;:&#160;<a class="el" href="validity_8cpp.html#a21a712c92fec631807207c1c14a04203">validity.cpp</a></li>
-<li>split()&#160;:&#160;<a class="el" href="validity_8cpp.html#ac5c9c38b2f4398ba25e82f413126f62c">validity.cpp</a></li>
-</ul>
+
+<p>A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root.  
+ <a href="structsplit__result.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a7cc2a42410df9e7b38e736342f818870"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplit__result.html#a7cc2a42410df9e7b38e736342f818870">valid</a></td></tr>
+<tr class="separator:a7cc2a42410df9e7b38e736342f818870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c43c75746b1e9753eafd8e4fe8e6a78"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplit__result.html#a7c43c75746b1e9753eafd8e4fe8e6a78">parts</a></td></tr>
+<tr class="separator:a7c43c75746b1e9753eafd8e4fe8e6a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7c43c75746b1e9753eafd8e4fe8e6a78" name="a7c43c75746b1e9753eafd8e4fe8e6a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c43c75746b1e9753eafd8e4fe8e6a78">&#9670;&#160;</a></span>parts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; split_result::parts</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Stores the left and right part of a formula split at the root node. </p>
+
+</div>
+</div>
+<a id="a7cc2a42410df9e7b38e736342f818870" name="a7cc2a42410df9e7b38e736342f818870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc2a42410df9e7b38e736342f818870">&#9670;&#160;</a></span>valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool split_result::valid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Checks if the split is valid. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="structsplit__result.html">split_result</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>

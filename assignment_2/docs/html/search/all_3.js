@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['evaluateexpression_4',['evaluateExpression',['../task5_8cpp.html#a0df664426c86ffdb838bc611e63b45c0',1,'task5.cpp']]],
-  ['evaluteparsetree_5',['evaluteParseTree',['../task5_8cpp.html#afa88b0250f8a51877e9dc1fe6f5119ea',1,'task5.cpp']]]
+  ['main_0',['main',['../validity_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'validity.cpp']]],
+  ['make_5fnegation_1',['make_negation',['../validity_8cpp.html#a90e620998abd5bf70fd916af02c0e418',1,'validity.cpp']]],
+  ['mt_5fchecker_2',['mt_checker',['../validity_8cpp.html#a0c2eca33760e98ac1facc25b700a45f4',1,'validity.cpp']]]
 ];
