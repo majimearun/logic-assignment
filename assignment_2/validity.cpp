@@ -5,12 +5,16 @@
 
 using namespace std;
 
+/// @brief A struct that contains the root node of a given propositional logic formula and it's index in the string.
 struct res
 {
-    char root;
-    int index;
+    char root; /*!<This is the root node of a given formula.*/
+    int index; /*!<This is the position of the root node in the string.*/
 };
 
+/// @brief Finds root node of the propositional logic formula.
+/// @param s The propositional logic formula.
+/// @return A pointer to a struct res that contains the root node and and it's index in the string.
 res *find_root(string s)
 {
     int add = 0;
@@ -85,13 +89,17 @@ res *find_root(string s)
         }
     }
 }
-
+/// @brief A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root.
 struct split_result
 {
-    bool valid;
-    vector<string> parts;
+    bool valid;           /*!<Checks if the split is valid.*/
+    vector<string> parts; /*!<Stores the left and right part of a formula split at the root node.*/
 };
 
+/// @brief Splits the propositional logic formula at its root node
+/// @param s The propositional logic formuala to be split at the root
+/// @param delimiter The operator expected to be the root node
+/// @return A pointer to struct split_result that stores the validity and parts of the split
 split_result *split(string s, char delimiter)
 {
     res *result = find_root(s);
@@ -105,11 +113,21 @@ split_result *split(string s, char delimiter)
     return new split_result{true, vector<string>{left, right}};
 }
 
+/// @brief Checks if the 'and introduction' rule has been used correctly
+/// @param l1 The first propositional logic formula used in the 'and introduction' rule
+/// @param l2 The second propositional logic formula used in the 'and introduction' rule
+/// @param r The propositional logic formula that used the 'and introduction' rule
+/// @return Boolean that checks if the rule has been correctly used
 bool and_intro_checker(string l1, string l2, string r)
 {
     return "(" + l1 + "*" + l2 + ")" == r;
 }
 
+/// @brief Checks if the 'and elimination' rule has been used correctly
+/// @param l The propositional logic formula on which 'and elimination' rule has been used
+/// @param r The propositional logic formula formed as a result of the use of 'and elimination' rule
+/// @param n Integer that stores whether 'and elimiation' rule 1 or 2 has been used
+/// @return Boolean that checks if the rule has been correctly used
 bool and_elim_checker(string l, string r, int n = 1)
 {
     split_result *sr = split(l, '*');
@@ -121,6 +139,11 @@ bool and_elim_checker(string l, string r, int n = 1)
     return result == r;
 }
 
+/// @brief Checks if the 'or introduction' rule has been used correctly
+/// @param l The propositional logic formula on which 'or introduction' rule has been used
+/// @param r The propositional logic formula formed as a result of the use of 'or introduction' rule
+/// @param n Integer that stores whether 'or introduction' rule 1 or 2 has been used
+/// @return Boolean that checks if the rule has been correctly used
 bool or_intro_checker(string l, string r, int n = 1)
 {
     split_result *sr = split(r, '+');
@@ -132,6 +155,11 @@ bool or_intro_checker(string l, string r, int n = 1)
     return result == l;
 }
 
+/// @brief Checks if the 'implies elimination' rule has been used correctly
+/// @param l1 The propositional loigc formula with root as >
+/// @param l2 The propositional logic formula on which > is checked
+/// @param r The propositional logic formula formed as a result of the use of 'implies elimination' rule
+/// @return Boolean that checks if the rule has been correctly used
 bool implies_elim_checker(string l1, string l2, string r)
 {
     split_result *sr = split(l1, '>');
@@ -146,6 +174,9 @@ bool implies_elim_checker(string l1, string l2, string r)
     return sr->parts[1] == r;
 }
 
+/// @brief Returns negation of propostional logic formula
+/// @param s The propositional logic formula to be negated
+/// @return The negated propostional logic formula
 string make_negation(string s)
 {
     if (s[0] == '~')
@@ -158,6 +189,11 @@ string make_negation(string s)
     }
 }
 
+/// @brief Checks if the 'MT' rule has been used correctly
+/// @param l1 The propositional loigc formula with root as >
+/// @param l2 The propositional logic formula on which > is checked
+/// @param r The propositional logic formula formed as a result of the use of 'MT' rule
+/// @return Boolean that checks if the rule has been correctly used
 bool mt_checker(string l1, string l2, string r)
 {
     split_result *sr = split(l1, '>');
@@ -177,15 +213,15 @@ int main()
 {
     int n;
     cin >> n;
-    vector<string> lines;
-    vector<string> values;
+    vector<string> lines;  // Vector containing the input lines of the proof.
+    vector<string> values; // Vector containing the propositional logic formula entered.
     bool valid = true;
     for (int i = 0; (i < n) && valid; i++)
     {
 
         string line;
         cin >> line;
-        vector<string> parts;
+        vector<string> parts; // Vector containing the input lines of the proof split into parts conatining propositional logic formula, proof rule, and line numbers.
         size_t pos = 0;
         string token;
         while ((pos = line.find('/')) != string::npos)
