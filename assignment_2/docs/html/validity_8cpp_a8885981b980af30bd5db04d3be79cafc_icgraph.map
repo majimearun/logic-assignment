@@ -1,0 +1,9 @@
+<map id="find_root" name="find_root">
+<area shape="rect" id="node1" title="Finds root node of the propositional logic formula." alt="" coords="417,81,496,108"/>
+<area shape="rect" id="node2" href="$validity_8cpp.html#a1db52045025282bb64c8c0ec8310bae8" title="Splits the propositional logic formula at its root node." alt="" coords="319,81,369,108"/>
+<area shape="rect" id="node3" href="$validity_8cpp.html#a405a66752cce8015790914e547f536a3" title="Checks if the &#39;and elimination&#39; rule has been used correctly." alt="" coords="120,5,259,32"/>
+<area shape="rect" id="node5" href="$validity_8cpp.html#ae2fc6dbf6e60b752ff38c4b59ba29a49" title="Checks if the &#39;implies elimination&#39; rule has been used correctly." alt="" coords="108,56,271,83"/>
+<area shape="rect" id="node6" href="$validity_8cpp.html#a0c2eca33760e98ac1facc25b700a45f4" title="Checks if the &#39;MT&#39; rule has been used correctly." alt="" coords="141,107,238,133"/>
+<area shape="rect" id="node7" href="$validity_8cpp.html#a21a712c92fec631807207c1c14a04203" title="Checks if the &#39;or introduction&#39; rule has been used correctly." alt="" coords="125,157,254,184"/>
+<area shape="rect" id="node4" href="$validity_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,81,60,108"/>
+</map>

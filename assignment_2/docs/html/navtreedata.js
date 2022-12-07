@@ -25,7 +25,14 @@
 var NAVTREE =
 [
   [ "Logic Assignment 2", "index.html", [
-    [ "README", "md__r_e_a_d_m_e.html", null ],
+    [ "Submission for CS F214: Logic assignment 2", "md__r_e_a_d_m_e.html", [
+      [ "Algorithm", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Example Runs", "md__r_e_a_d_m_e.html#autotoc_md2", [
+        [ "Example 1:", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+        [ "Example 2:", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
+      ] ],
+      [ "For the implementation of other rules:", "md__r_e_a_d_m_e.html#autotoc_md5", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

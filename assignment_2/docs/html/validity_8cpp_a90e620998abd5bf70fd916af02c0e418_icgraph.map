@@ -1,0 +1,5 @@
+<map id="make_negation" name="make_negation">
+<area shape="rect" id="node1" title="Returns negation of propostional logic formula." alt="" coords="253,5,376,32"/>
+<area shape="rect" id="node2" href="$validity_8cpp.html#a0c2eca33760e98ac1facc25b700a45f4" title="Checks if the &#39;MT&#39; rule has been used correctly." alt="" coords="108,5,205,32"/>
+<area shape="rect" id="node3" href="$validity_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structres" xml:lang="en-US">
+<title>res Struct Reference</title>
+<indexterm><primary>res</primary></indexterm>
+<para>
+
+<para>A struct that contains the root node of a given propositional logic formula and it&apos;s index in the string. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_structres_1aaecaed72bc21020890c6486402b69d0e">root</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structres_1afc1e28d3eefc1d97e092a81239e83669">index</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A struct that contains the root node of a given propositional logic formula and it&apos;s index in the string. </para>
+<para>
+Definition at line 9 of file validity.cpp.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structres_1afc1e28d3eefc1d97e092a81239e83669"/>    <section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>res</secondary></indexterm>
+<indexterm><primary>res</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int res::index</computeroutput></para>
+<para>This is the position of the root node in the string. </para>
+<para>
+Definition at line 12 of file validity.cpp.</para>
+    </section><anchor xml:id="_structres_1aaecaed72bc21020890c6486402b69d0e"/>    <section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>res</secondary></indexterm>
+<indexterm><primary>res</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>char res::root</computeroutput></para>
+<para>This is the root node of a given formula. </para>
+<para>
+Definition at line 11 of file validity.cpp.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_validity_8cpp">validity.cpp</link></section>
+</section>

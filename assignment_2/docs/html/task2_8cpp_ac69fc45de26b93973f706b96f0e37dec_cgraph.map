@@ -1,7 +1,0 @@
-<map id="prefixToParseTree" name="prefixToParseTree">
-<area shape="rect" id="node1" title="Function to make a parse tree from given prefix expression." alt="" coords="5,81,140,108"/>
-<area shape="rect" id="node2" href="$classnode.html#abf6cfde2a45f8fe549715ef7777b8395" title="Function to fill the current node&#39;s data variable with the passed character." alt="" coords="212,5,291,32"/>
-<area shape="rect" id="node3" href="$classnode.html#a9845c42e8f1895b4227696d3efbab774" title="Function to fill the root node of the left subtree of the current node." alt="" coords="200,56,303,83"/>
-<area shape="rect" id="node4" href="$classnode.html#a0fffcad240f55c30da68f2c82ff1f8d5" title="Function to fill the root node of the right subtree of the current node." alt="" coords="195,107,307,133"/>
-<area shape="rect" id="node5" href="$classutils.html#a9091d74d142f6b38936718ead6914706" title="Function to check whether the passed character is a member of the operators array or not." alt="" coords="188,157,315,184"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="utils::infixToParseTree" name="utils::infixToParseTree">
-<area shape="rect" id="node1" title="A function to take in the infix expression of a logical formula as a string and make a parse tree." alt="" coords="5,119,168,145"/>
-<area shape="rect" id="node2" href="$classnode.html#abf6cfde2a45f8fe549715ef7777b8395" title="Function to fill the current node&#39;s data variable with the passed character." alt="" coords="415,5,493,32"/>
-<area shape="rect" id="node3" href="$classnode.html#a9845c42e8f1895b4227696d3efbab774" title="Function to fill the root node of the left subtree of the current node." alt="" coords="403,68,505,95"/>
-<area shape="rect" id="node4" href="$classnode.html#a0fffcad240f55c30da68f2c82ff1f8d5" title="Function to fill the root node of the right subtree of the current node." alt="" coords="398,144,510,171"/>
-<area shape="rect" id="node5" href="$task1_8cpp.html#a46826317eba72b462e7673c9356f8101" title="A function to take in the infix expression of a logical formula as a string and make a parse tree." alt="" coords="216,93,343,120"/>
-<area shape="rect" id="node6" href="$classutils.html#affcc137d1d7b88aaa3762063f1d1db89" title="Checks whether the passed character is a bracket( &#39;(&#39; or &#39;)&#39; ) or not." alt="" coords="395,195,513,221"/>
-<area shape="rect" id="node7" href="$classutils.html#a9091d74d142f6b38936718ead6914706" title="Function to check whether the passed character is a member of the operators array or not." alt="" coords="391,245,517,272"/>
-</map>

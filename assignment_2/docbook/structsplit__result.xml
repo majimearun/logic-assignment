@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structsplit__result" xml:lang="en-US">
+<title>split_result Struct Reference</title>
+<indexterm><primary>split_result</primary></indexterm>
+<para>
+
+<para>A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structsplit__result_1a7cc2a42410df9e7b38e736342f818870">valid</link></para>
+</listitem>
+            <listitem><para>vector&lt; string &gt; <link linkend="_structsplit__result_1a7c43c75746b1e9753eafd8e4fe8e6a78">parts</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root. </para>
+<para>
+Definition at line 93 of file validity.cpp.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structsplit__result_1a7c43c75746b1e9753eafd8e4fe8e6a78"/>    <section>
+    <title>parts</title>
+<indexterm><primary>parts</primary><secondary>split_result</secondary></indexterm>
+<indexterm><primary>split_result</primary><secondary>parts</secondary></indexterm>
+<para><computeroutput>vector&lt;string&gt; split_result::parts</computeroutput></para>
+<para>Stores the left and right part of a formula split at the root node. </para>
+<para>
+Definition at line 96 of file validity.cpp.</para>
+    </section><anchor xml:id="_structsplit__result_1a7cc2a42410df9e7b38e736342f818870"/>    <section>
+    <title>valid</title>
+<indexterm><primary>valid</primary><secondary>split_result</secondary></indexterm>
+<indexterm><primary>split_result</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool split_result::valid</computeroutput></para>
+<para>Checks if the split is valid. </para>
+<para>
+Definition at line 95 of file validity.cpp.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_validity_8cpp">validity.cpp</link></section>
+</section>

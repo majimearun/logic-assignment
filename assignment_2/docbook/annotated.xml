@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_structres">res</link>
+<para>A struct that contains the root node of a given propositional logic formula and it&apos;s index in the string </para>
+<link linkend="_structsplit__result">split_result</link>
+<para>A struct that stores validity of a given line of proof and the propositional logic formula split into 2 parts at the root </para>
+</section>

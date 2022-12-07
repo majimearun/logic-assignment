@@ -1,0 +1,5 @@
+<map id="and_elim_checker" name="and_elim_checker">
+<area shape="rect" id="node1" title="Checks if the &#39;and elimination&#39; rule has been used correctly." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$validity_8cpp.html#a1db52045025282bb64c8c0ec8310bae8" title="Splits the propositional logic formula at its root node." alt="" coords="192,5,243,32"/>
+<area shape="rect" id="node3" href="$validity_8cpp.html#a8885981b980af30bd5db04d3be79cafc" title="Finds root node of the propositional logic formula." alt="" coords="291,5,369,32"/>
+</map>
